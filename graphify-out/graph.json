@@ -88,6 +88,18 @@
       "source_location": "L4"
     },
     {
+      "id": "src_pages_login_login_handlegooglesignin",
+      "label": "handleGoogleSignIn()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "handlegooglesignin()",
+      "source_file": "src/pages/Login.jsx",
+      "source_location": "L13"
+    },
+    {
       "id": "src_pages_login_login_handlesubmit",
       "label": "handleSubmit()",
       "_callable": true,
@@ -97,7 +109,7 @@
       "file_type": "code",
       "norm_label": "handlesubmit()",
       "source_file": "src/pages/Login.jsx",
-      "source_location": "L12"
+      "source_location": "L28"
     },
     {
       "id": "src_pages_login_login_handleverifycode",
@@ -109,7 +121,7 @@
       "file_type": "code",
       "norm_label": "handleverifycode()",
       "source_file": "src/pages/Login.jsx",
-      "source_location": "L31"
+      "source_location": "L47"
     },
     {
       "id": "src_pages_onboarding_onboarding",
@@ -7261,13 +7273,24 @@
     },
     {
       "source": "src_pages_login_login",
+      "target": "src_pages_login_login_handlegooglesignin",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/pages/Login.jsx",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_login_login",
       "target": "src_pages_login_login_handlesubmit",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/pages/Login.jsx",
-      "source_location": "L12",
+      "source_location": "L28",
       "weight": 1.0
     },
     {
@@ -7278,7 +7301,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/pages/Login.jsx",
-      "source_location": "L31",
+      "source_location": "L47",
       "weight": 1.0
     },
     {
@@ -7535,5 +7558,6 @@
       "weight": 1.0
     }
   ],
-  "hyperedges": []
+  "hyperedges": [],
+  "built_at_commit": "296eda18b00bfdbec7878d9ca362a27eaf33390a"
 }

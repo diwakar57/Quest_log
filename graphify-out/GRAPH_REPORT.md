@@ -1,13 +1,18 @@
 # Graph Report - Quest_log  (2026-09-03)
 
 ## Corpus Check
-- 40 files · ~30,526 words
+- 40 files · ~30,711 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 257 nodes · 393 edges · 22 communities (16 shown, 5 thin omitted)
+- 258 nodes · 394 edges · 22 communities (16 shown, 5 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
+
+## Graph Freshness
+- Built from commit: `296eda18`
+- Run `git rev-parse HEAD` and compare to check if the graph is stale.
+- Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - package.json
@@ -110,7 +115,7 @@ Cohesion: 0.50
 Nodes (3): For --cluster-only, For --update (incremental re-extraction), graphify reference: incremental update and cluster-only
 
 ### Community 12 - "App.jsx"
-Cohesion: 0.13
+Cohesion: 0.12
 Nodes (19): react, App(), DebugDateBanner(), activeDebugDate(), DAYS, pickRunDay(), todayISODate(), supabase (+11 more)
 
 ### Community 14 - "React + Vite"
@@ -127,7 +132,7 @@ Nodes (21): mealSidePools, restDayQuests, runProgression, trials, workoutPools, 
 
 ## Knowledge Gaps
 - **106 isolated node(s):** `$schema`, `oxc`, `react/rules-of-hooks`, `warn`, `name` (+101 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 133 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 134 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
