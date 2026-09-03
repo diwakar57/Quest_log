@@ -1,0 +1,308 @@
+{
+  ".claude/settings.json": {
+    "mtime": 1788376744.136443,
+    "seen": 1788395034.2969058,
+    "ast_hash": "9d3a84e246dcd96f09de4953d315788f",
+    "semantic_hash": ""
+  },
+  ".oxlintrc.json": {
+    "mtime": 1788272067.9407008,
+    "seen": 1788376517.3607423,
+    "ast_hash": "5e6e3cea3e89137071c142dd7835b0ef",
+    "semantic_hash": "5e6e3cea3e89137071c142dd7835b0ef"
+  },
+  "package.json": {
+    "mtime": 1788470605.708633,
+    "seen": 1788470806.2169101,
+    "ast_hash": "783e3d2a687829b44fdd5a69d3f8c2c5",
+    "semantic_hash": ""
+  },
+  "src/App.jsx": {
+    "mtime": 1788474283.3218634,
+    "seen": 1788474323.8574371,
+    "ast_hash": "0d0379c268a31693301bd30f54940c03",
+    "semantic_hash": ""
+  },
+  "src/lib/supabaseClient.js": {
+    "mtime": 1788272777.3655324,
+    "seen": 1788376517.3607473,
+    "ast_hash": "866e919088bb2f034c5a449971be9031",
+    "semantic_hash": "866e919088bb2f034c5a449971be9031"
+  },
+  "src/main.jsx": {
+    "mtime": 1788272067.9897099,
+    "seen": 1788376517.3607483,
+    "ast_hash": "e13723e2574429d9a6d849727e3ff695",
+    "semantic_hash": "e13723e2574429d9a6d849727e3ff695"
+  },
+  "vite.config.js": {
+    "mtime": 1788470672.2724912,
+    "seen": 1788470806.21864,
+    "ast_hash": "2377e82707408ca7da4b7e545403edf9",
+    "semantic_hash": ""
+  },
+  ".claude/CLAUDE.md": {
+    "mtime": 1788376488.6336422,
+    "seen": 1788395034.2975304,
+    "ast_hash": "c232166e6492ba1ed955030b16979b05",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/SKILL.md": {
+    "mtime": 1788376744.1338573,
+    "seen": 1788395034.297532,
+    "ast_hash": "1656a8a8e4a05bbe69f32cd15de81e87",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/references/add-watch.md": {
+    "mtime": 1788376482.0982316,
+    "seen": 1788395034.2975338,
+    "ast_hash": "d59d027fe449f06aa03905a01184e779",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/references/exports.md": {
+    "mtime": 1788376482.099233,
+    "seen": 1788395034.2975347,
+    "ast_hash": "9da2a2152e60a22f07f05fed5158f287",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/references/extraction-spec.md": {
+    "mtime": 1788376482.1002326,
+    "seen": 1788395034.2975366,
+    "ast_hash": "42fef56a01698118f7fd722acdadea34",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/references/github-and-merge.md": {
+    "mtime": 1788376482.1012356,
+    "seen": 1788395034.2975376,
+    "ast_hash": "cde13df085e4c492aeb7ba298a996d0d",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/references/hooks.md": {
+    "mtime": 1788376482.1022334,
+    "seen": 1788395034.2975388,
+    "ast_hash": "3f545db6ce646650bb9de588f5512a27",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/references/query.md": {
+    "mtime": 1788376482.1032307,
+    "seen": 1788395034.2975402,
+    "ast_hash": "3c46f8ad006874260614ed8657d02307",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/references/transcribe.md": {
+    "mtime": 1788376482.1032307,
+    "seen": 1788395034.2975414,
+    "ast_hash": "67b6a5fa6c0974e18f60db9f8932fbd8",
+    "semantic_hash": ""
+  },
+  ".claude/skills/graphify/references/update.md": {
+    "mtime": 1788376482.1047366,
+    "seen": 1788395034.2975423,
+    "ast_hash": "9378bd03d56baaf78bd738ab3848f142",
+    "semantic_hash": ""
+  },
+  "CLAUDE.md": {
+    "mtime": 1788376488.6346385,
+    "seen": 1788395034.2975435,
+    "ast_hash": "8a6643a420fdad6bfb583523bc6cef16",
+    "semantic_hash": ""
+  },
+  "Claude_Code_Build_Tasks.md": {
+    "mtime": 1788443002.6296837,
+    "seen": 1788443082.151929,
+    "ast_hash": "702b0034d44b3eb6fa327ca19ba0d91d",
+    "semantic_hash": ""
+  },
+  "Execution_Workflow.md": {
+    "mtime": 1788394318.5673232,
+    "seen": 1788395034.2975452,
+    "ast_hash": "8186a6e3d1cd8afd4cf2b6a7bc6cefe1",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1788272067.9947145,
+    "seen": 1788395034.2975461,
+    "ast_hash": "75eb386f17caf77fd6fe3ce1d90968ee",
+    "semantic_hash": ""
+  },
+  "index.html": {
+    "mtime": 1788470683.9949934,
+    "seen": 1788470806.2198205,
+    "ast_hash": "4286e3e89e4b898b93b91a6cb9f63dec",
+    "semantic_hash": ""
+  },
+  "Claude_Code_Build_Tasks.pdf": {
+    "mtime": 1788394439.009555,
+    "seen": 1788395034.2975488,
+    "ast_hash": "62b08251e0c84dd4c5d5fdd22f02f948",
+    "semantic_hash": ""
+  },
+  "Execution_Workflow.pdf": {
+    "mtime": 1788394443.7193618,
+    "seen": 1788395034.2975497,
+    "ast_hash": "7b30048c817dbd92490905a5a79276ec",
+    "semantic_hash": ""
+  },
+  "public/favicon.svg": {
+    "mtime": 1788272068.0542042,
+    "seen": 1788395034.297551,
+    "ast_hash": "7e840862161341271697daa99a40d76b",
+    "semantic_hash": ""
+  },
+  "public/icons.svg": {
+    "mtime": 1788272068.0741985,
+    "seen": 1788395034.2975516,
+    "ast_hash": "3b4fcfcf393eca4d264dca4a4663bc37",
+    "semantic_hash": ""
+  },
+  "src/assets/hero.png": {
+    "mtime": 1788272068.0231988,
+    "seen": 1788395034.2975526,
+    "ast_hash": "aead493361b27e7510691c5d7072dfc1",
+    "semantic_hash": ""
+  },
+  "src/assets/react.svg": {
+    "mtime": 1788272068.0957146,
+    "seen": 1788395034.2975538,
+    "ast_hash": "f0402b67b6ce880f65666bb49e841696",
+    "semantic_hash": ""
+  },
+  "src/assets/vite.svg": {
+    "mtime": 1788272068.112911,
+    "seen": 1788395034.2975545,
+    "ast_hash": "9960a24288958394ac50e57ff638b036",
+    "semantic_hash": ""
+  },
+  "src/lib/onboarding.js": {
+    "mtime": 1788441606.182881,
+    "seen": 1788441661.5625541,
+    "ast_hash": "9b91c5351041647e2fb96aaa4281313c",
+    "semantic_hash": ""
+  },
+  "src/pages/Login.jsx": {
+    "mtime": 1788473182.0201058,
+    "seen": 1788473292.1863317,
+    "ast_hash": "85a47d5cdf10e8c477e5d9cf6a163393",
+    "semantic_hash": ""
+  },
+  "src/pages/Onboarding.jsx": {
+    "mtime": 1788396241.7313414,
+    "seen": 1788396259.7286878,
+    "ast_hash": "c4369e4f00bb0b9193777b7d8291bd8e",
+    "semantic_hash": ""
+  },
+  "src/pages/Today.jsx": {
+    "mtime": 1788474296.7819397,
+    "seen": 1788474323.8588946,
+    "ast_hash": "aa1fcabb6331b6422dfee547517352ad",
+    "semantic_hash": ""
+  },
+  "src/content/achievements.js": {
+    "mtime": 1788395859.4388044,
+    "seen": 1788395887.721537,
+    "ast_hash": "24b61ba3c329f855f3acc3aac47aaa41",
+    "semantic_hash": ""
+  },
+  "src/content/mealSidePools.js": {
+    "mtime": 1788442852.9674702,
+    "seen": 1788443082.1499622,
+    "ast_hash": "c735db9aa1f4f825463b746600aede55",
+    "semantic_hash": ""
+  },
+  "src/content/restDayQuests.js": {
+    "mtime": 1788442860.1842532,
+    "seen": 1788443082.1499653,
+    "ast_hash": "af8abdc88f4d8ccb1d204387683feb6e",
+    "semantic_hash": ""
+  },
+  "src/content/runProgression.js": {
+    "mtime": 1788402626.654732,
+    "seen": 1788402786.7400773,
+    "ast_hash": "3cc47b7b7d52e1926c9f82e1f9438648",
+    "semantic_hash": ""
+  },
+  "src/content/trials.js": {
+    "mtime": 1788395853.9484506,
+    "seen": 1788395887.721544,
+    "ast_hash": "1b549ace5c13f89c3693302b15a4a490",
+    "semantic_hash": ""
+  },
+  "src/content/workoutPools.js": {
+    "mtime": 1788442815.9138167,
+    "seen": 1788443082.1501968,
+    "ast_hash": "3bf857a1658f41121980fed76caf4893",
+    "semantic_hash": ""
+  },
+  "src/lib/questLogic.js": {
+    "mtime": 1788446447.7992346,
+    "seen": 1788446566.0930414,
+    "ast_hash": "587064b055485612483349657d7b8a43",
+    "semantic_hash": ""
+  },
+  "src/lib/questLogic.test.js": {
+    "mtime": 1788446459.06907,
+    "seen": 1788446566.0930436,
+    "ast_hash": "a498b446e6cbe74dcca2e806a4a889be",
+    "semantic_hash": ""
+  },
+  "src/lib/streakLogic.js": {
+    "mtime": 1788403215.0086665,
+    "seen": 1788403311.014396,
+    "ast_hash": "0dbd2b4dfe867adbed194e68f0b6148b",
+    "semantic_hash": ""
+  },
+  "src/lib/streakLogic.test.js": {
+    "mtime": 1788403219.4744532,
+    "seen": 1788403311.0143988,
+    "ast_hash": "463d313f17a8896ffe5ea95e3b290e67",
+    "semantic_hash": ""
+  },
+  "src/pages/Character.jsx": {
+    "mtime": 1788469317.2606492,
+    "seen": 1788469354.7979808,
+    "ast_hash": "b231f22f18c07c1ba8c6bb63400613f5",
+    "semantic_hash": ""
+  },
+  "src/pages/Progress.jsx": {
+    "mtime": 1788448407.7878914,
+    "seen": 1788448486.2470167,
+    "ast_hash": "b39683135658fa43e9137ea6cc1a1fc5",
+    "semantic_hash": ""
+  },
+  "src/lib/achievementLogic.js": {
+    "mtime": 1788469202.125532,
+    "seen": 1788469354.7974174,
+    "ast_hash": "227960258bc2c6d8ea6cd8baad254147",
+    "semantic_hash": ""
+  },
+  "src/pages/Settings.jsx": {
+    "mtime": 1788469980.6510706,
+    "seen": 1788470305.4562058,
+    "ast_hash": "6a0e84894c24334624caa45978fd9979",
+    "semantic_hash": ""
+  },
+  "public/apple-touch-icon.png": {
+    "mtime": 1788470662.5813606,
+    "seen": 1788470806.2199802,
+    "ast_hash": "899a9913cd7c8f4eb0e35d4cc4c3fdd4",
+    "semantic_hash": ""
+  },
+  "public/maskable-icon-512x512.png": {
+    "mtime": 1788470662.5310352,
+    "seen": 1788470806.2201464,
+    "ast_hash": "c1da3f5d39faf55330bf99ba95c11b0c",
+    "semantic_hash": ""
+  },
+  "public/pwa-192x192.png": {
+    "mtime": 1788470662.4359043,
+    "seen": 1788470806.2201476,
+    "ast_hash": "fb3fdcde2e29f1c9e1523bef586f79b3",
+    "semantic_hash": ""
+  },
+  "public/pwa-512x512.png": {
+    "mtime": 1788470662.4649417,
+    "seen": 1788470806.2201488,
+    "ast_hash": "008cfbd2d657d3d02912b0d1467bd6a6",
+    "semantic_hash": ""
+  }
+}

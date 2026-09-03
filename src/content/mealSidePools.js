@@ -1,0 +1,117 @@
+// Meal side-quests, indexed by tier (0 = easiest, 5 = strictest).
+// type 'number': completion auto-derives from a logged value vs `target`,
+//   using `comparison` — 'gte' (at least) or 'lte' (at most).
+// type 'boolean': no number to log; completion is a manual yes/no confirmation.
+// Each tier has 12+ entries so a shuffled cycle covers a full ~2-week tier
+// without repeats; later tiers add more categories (meal prep, timing
+// precision) as the habits they test only make sense once earlier ones stick.
+export const mealSidePools = [
+  // Tier 0 — 12 entries
+  [
+    { key: 'veg_servings', text: 'Eat at least 1 serving of vegetables today', type: 'number', unit: 'servings', target: 1, comparison: 'gte' },
+    { key: 'fruit_servings', text: 'Eat at least 1 serving of fruit today', type: 'number', unit: 'servings', target: 1, comparison: 'gte' },
+    { key: 'water_intake', text: 'Drink 1.5 liters of water today', type: 'number', unit: 'liters', target: 1.5, comparison: 'gte' },
+    { key: 'screen_free_meals', text: 'Log 1 or fewer meals eaten in front of a screen today', type: 'number', unit: 'meals', target: 1, comparison: 'lte' },
+    { key: 'sugary_drinks', text: 'Log 1 or fewer sugary drinks today', type: 'number', unit: 'drinks', target: 1, comparison: 'lte' },
+    { key: 'fried_food', text: 'Log 1 or fewer fried food meals today', type: 'number', unit: 'meals', target: 1, comparison: 'lte' },
+    { key: 'fast_food', text: 'Log 1 or fewer fast food meals today', type: 'number', unit: 'meals', target: 1, comparison: 'lte' },
+    { key: 'dessert_count', text: 'Log 2 or fewer desserts today', type: 'number', unit: 'desserts', target: 2, comparison: 'lte' },
+    { key: 'alcohol_drinks', text: 'Log 2 or fewer alcoholic drinks today', type: 'number', unit: 'drinks', target: 2, comparison: 'lte' },
+    { key: 'snack_count', text: 'Log 3 or fewer snacks today', type: 'number', unit: 'snacks', target: 3, comparison: 'lte' },
+    { key: 'home_cooked_meals', text: 'Eat at least 1 home-cooked meal today', type: 'number', unit: 'meals', target: 1, comparison: 'gte' },
+    { key: 'protein_at_breakfast', text: 'Log whether you ate a protein source at breakfast — yes or no', type: 'boolean' },
+  ],
+  // Tier 1 — 12 entries
+  [
+    { key: 'veg_servings', text: 'Eat at least 2 servings of vegetables today', type: 'number', unit: 'servings', target: 2, comparison: 'gte' },
+    { key: 'fruit_servings', text: 'Eat at least 1 serving of fruit today', type: 'number', unit: 'servings', target: 1, comparison: 'gte' },
+    { key: 'water_intake', text: 'Drink 2 liters of water today', type: 'number', unit: 'liters', target: 2, comparison: 'gte' },
+    { key: 'screen_free_meals', text: 'Log 0 meals eaten in front of a screen today', type: 'number', unit: 'meals', target: 0, comparison: 'lte' },
+    { key: 'sugary_drinks', text: 'Log 0 sugary drinks today', type: 'number', unit: 'drinks', target: 0, comparison: 'lte' },
+    { key: 'fried_food', text: 'Log 1 or fewer fried food meals today', type: 'number', unit: 'meals', target: 1, comparison: 'lte' },
+    { key: 'fast_food', text: 'Log 0 fast food meals today', type: 'number', unit: 'meals', target: 0, comparison: 'lte' },
+    { key: 'dessert_count', text: 'Log 1 or fewer desserts today', type: 'number', unit: 'desserts', target: 1, comparison: 'lte' },
+    { key: 'alcohol_drinks', text: 'Log 1 or fewer alcoholic drinks today', type: 'number', unit: 'drinks', target: 1, comparison: 'lte' },
+    { key: 'snack_count', text: 'Log 3 or fewer snacks today', type: 'number', unit: 'snacks', target: 3, comparison: 'lte' },
+    { key: 'home_cooked_meals', text: 'Eat at least 1 home-cooked meal today', type: 'number', unit: 'meals', target: 1, comparison: 'gte' },
+    { key: 'protein_at_breakfast', text: 'Log whether you ate a protein source at breakfast — yes or no', type: 'boolean' },
+  ],
+  // Tier 2 — 14 entries (adds meal prep + last-meal timing)
+  [
+    { key: 'veg_servings', text: 'Eat at least 2 servings of vegetables today', type: 'number', unit: 'servings', target: 2, comparison: 'gte' },
+    { key: 'fruit_servings', text: 'Eat at least 2 servings of fruit today', type: 'number', unit: 'servings', target: 2, comparison: 'gte' },
+    { key: 'water_intake', text: 'Drink 2.5 liters of water today', type: 'number', unit: 'liters', target: 2.5, comparison: 'gte' },
+    { key: 'screen_free_meals', text: 'Log 0 meals eaten in front of a screen today', type: 'number', unit: 'meals', target: 0, comparison: 'lte' },
+    { key: 'sugary_drinks', text: 'Log 0 sugary drinks today', type: 'number', unit: 'drinks', target: 0, comparison: 'lte' },
+    { key: 'fried_food', text: 'Log 0 fried food meals today', type: 'number', unit: 'meals', target: 0, comparison: 'lte' },
+    { key: 'fast_food', text: 'Log 0 fast food meals today', type: 'number', unit: 'meals', target: 0, comparison: 'lte' },
+    { key: 'dessert_count', text: 'Log 1 or fewer desserts today', type: 'number', unit: 'desserts', target: 1, comparison: 'lte' },
+    { key: 'alcohol_drinks', text: 'Log 1 or fewer alcoholic drinks today', type: 'number', unit: 'drinks', target: 1, comparison: 'lte' },
+    { key: 'snack_count', text: 'Log 2 or fewer snacks today', type: 'number', unit: 'snacks', target: 2, comparison: 'lte' },
+    { key: 'home_cooked_meals', text: 'Eat at least 2 home-cooked meals today', type: 'number', unit: 'meals', target: 2, comparison: 'gte' },
+    { key: 'protein_at_breakfast', text: 'Log whether you ate a protein source at breakfast — yes or no', type: 'boolean' },
+    { key: 'meal_prep', text: 'Prep and log 1+ meal for tomorrow tonight', type: 'number', unit: 'meals', target: 1, comparison: 'gte' },
+    { key: 'last_meal_before_9pm', text: 'Log your last meal time — must be before 9pm', type: 'boolean' },
+  ],
+  // Tier 3 — 16 entries (adds caffeine cutoff + portion measuring)
+  [
+    { key: 'veg_servings', text: 'Eat at least 3 servings of vegetables today', type: 'number', unit: 'servings', target: 3, comparison: 'gte' },
+    { key: 'fruit_servings', text: 'Eat at least 2 servings of fruit today', type: 'number', unit: 'servings', target: 2, comparison: 'gte' },
+    { key: 'water_intake', text: 'Drink 3 liters of water today', type: 'number', unit: 'liters', target: 3, comparison: 'gte' },
+    { key: 'screen_free_meals', text: 'Log 0 meals eaten in front of a screen today', type: 'number', unit: 'meals', target: 0, comparison: 'lte' },
+    { key: 'sugary_drinks', text: 'Log 0 sugary drinks today', type: 'number', unit: 'drinks', target: 0, comparison: 'lte' },
+    { key: 'fried_food', text: 'Log 0 fried food meals today', type: 'number', unit: 'meals', target: 0, comparison: 'lte' },
+    { key: 'fast_food', text: 'Log 0 fast food meals today', type: 'number', unit: 'meals', target: 0, comparison: 'lte' },
+    { key: 'dessert_count', text: 'Log 0 desserts today', type: 'number', unit: 'desserts', target: 0, comparison: 'lte' },
+    { key: 'alcohol_drinks', text: 'Log 0 alcoholic drinks today', type: 'number', unit: 'drinks', target: 0, comparison: 'lte' },
+    { key: 'snack_count', text: 'Log 2 or fewer snacks today', type: 'number', unit: 'snacks', target: 2, comparison: 'lte' },
+    { key: 'home_cooked_meals', text: 'Eat at least 2 home-cooked meals today', type: 'number', unit: 'meals', target: 2, comparison: 'gte' },
+    { key: 'protein_at_breakfast', text: 'Log whether you ate a protein source at breakfast — yes or no', type: 'boolean' },
+    { key: 'meal_prep', text: 'Prep and log 1+ meal for tomorrow tonight', type: 'number', unit: 'meals', target: 1, comparison: 'gte' },
+    { key: 'last_meal_before_9pm', text: 'Log your last meal time — must be before 9pm', type: 'boolean' },
+    { key: 'caffeine_cutoff', text: 'Log your last caffeine intake — must be before 2pm', type: 'boolean' },
+    { key: 'portion_measured_meals', text: 'Measure or weigh the portions of at least 1 meal today', type: 'number', unit: 'meals', target: 1, comparison: 'gte' },
+  ],
+  // Tier 4 — 17 entries (adds eating window)
+  [
+    { key: 'veg_servings', text: 'Eat at least 3 servings of vegetables today', type: 'number', unit: 'servings', target: 3, comparison: 'gte' },
+    { key: 'fruit_servings', text: 'Eat at least 2 servings of fruit today', type: 'number', unit: 'servings', target: 2, comparison: 'gte' },
+    { key: 'water_intake', text: 'Drink 3 liters of water today', type: 'number', unit: 'liters', target: 3, comparison: 'gte' },
+    { key: 'screen_free_meals', text: 'Log 0 meals eaten in front of a screen today', type: 'number', unit: 'meals', target: 0, comparison: 'lte' },
+    { key: 'sugary_drinks', text: 'Log 0 sugary drinks today', type: 'number', unit: 'drinks', target: 0, comparison: 'lte' },
+    { key: 'fried_food', text: 'Log 0 fried food meals today', type: 'number', unit: 'meals', target: 0, comparison: 'lte' },
+    { key: 'fast_food', text: 'Log 0 fast food meals today', type: 'number', unit: 'meals', target: 0, comparison: 'lte' },
+    { key: 'dessert_count', text: 'Log 0 desserts today', type: 'number', unit: 'desserts', target: 0, comparison: 'lte' },
+    { key: 'alcohol_drinks', text: 'Log 0 alcoholic drinks today', type: 'number', unit: 'drinks', target: 0, comparison: 'lte' },
+    { key: 'snack_count', text: 'Log 1 or fewer snacks today', type: 'number', unit: 'snacks', target: 1, comparison: 'lte' },
+    { key: 'home_cooked_meals', text: 'Eat at least 3 home-cooked meals today', type: 'number', unit: 'meals', target: 3, comparison: 'gte' },
+    { key: 'protein_at_breakfast', text: 'Log whether you ate a protein source at breakfast — yes or no', type: 'boolean' },
+    { key: 'meal_prep', text: 'Prep and log 2+ meals for tomorrow tonight', type: 'number', unit: 'meals', target: 2, comparison: 'gte' },
+    { key: 'last_meal_before_9pm', text: 'Log your last meal time — must be before 9pm', type: 'boolean' },
+    { key: 'caffeine_cutoff', text: 'Log your last caffeine intake — must be before 2pm', type: 'boolean' },
+    { key: 'portion_measured_meals', text: 'Measure or weigh the portions of at least 2 meals today', type: 'number', unit: 'meals', target: 2, comparison: 'gte' },
+    { key: 'eating_window', text: 'Log whether all your eating happened within a 10-hour window today', type: 'boolean' },
+  ],
+  // Tier 5 — Precision — 17 entries
+  [
+    { key: 'veg_servings', text: 'Eat at least 4 servings of vegetables today', type: 'number', unit: 'servings', target: 4, comparison: 'gte' },
+    { key: 'fruit_servings', text: 'Eat at least 3 servings of fruit today', type: 'number', unit: 'servings', target: 3, comparison: 'gte' },
+    { key: 'water_intake', text: 'Drink 3.5 liters of water today', type: 'number', unit: 'liters', target: 3.5, comparison: 'gte' },
+    { key: 'screen_free_meals', text: 'Log 0 meals eaten in front of a screen today', type: 'number', unit: 'meals', target: 0, comparison: 'lte' },
+    { key: 'sugary_drinks', text: 'Log 0 sugary drinks today', type: 'number', unit: 'drinks', target: 0, comparison: 'lte' },
+    { key: 'fried_food', text: 'Log 0 fried food meals today', type: 'number', unit: 'meals', target: 0, comparison: 'lte' },
+    { key: 'fast_food', text: 'Log 0 fast food meals today', type: 'number', unit: 'meals', target: 0, comparison: 'lte' },
+    { key: 'dessert_count', text: 'Log 0 desserts today', type: 'number', unit: 'desserts', target: 0, comparison: 'lte' },
+    { key: 'alcohol_drinks', text: 'Log 0 alcoholic drinks today', type: 'number', unit: 'drinks', target: 0, comparison: 'lte' },
+    { key: 'snack_count', text: 'Log 1 or fewer snacks today', type: 'number', unit: 'snacks', target: 1, comparison: 'lte' },
+    { key: 'home_cooked_meals', text: 'Eat at least 3 home-cooked meals today', type: 'number', unit: 'meals', target: 3, comparison: 'gte' },
+    { key: 'protein_at_breakfast', text: 'Log whether you ate a protein source at breakfast — yes or no', type: 'boolean' },
+    { key: 'meal_prep', text: 'Prep and log 2+ meals for tomorrow tonight', type: 'number', unit: 'meals', target: 2, comparison: 'gte' },
+    { key: 'last_meal_before_9pm', text: 'Log your last meal time — must be before 9pm', type: 'boolean' },
+    { key: 'caffeine_cutoff', text: 'Log your last caffeine intake — must be before 2pm', type: 'boolean' },
+    { key: 'portion_measured_meals', text: 'Measure or weigh the portions of at least 3 meals today', type: 'number', unit: 'meals', target: 3, comparison: 'gte' },
+    { key: 'eating_window', text: 'Log whether all your eating happened within a 10-hour window today', type: 'boolean' },
+  ],
+]
+
+export default mealSidePools

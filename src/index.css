@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+/* viewport-fit=cover (index.html) lets content flow under the notch/Dynamic
+   Island and home-indicator area on iPhone — without this, that content gets
+   clipped or cramped by those zones, especially in installed standalone mode. */
+body {
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+}
