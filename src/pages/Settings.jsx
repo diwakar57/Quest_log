@@ -84,27 +84,26 @@ export default function Settings({ session, userRow, onUserRowChange }) {
   }
 
   return (
-    <div className="min-h-screen bg-slate-900 px-4 py-8 pb-24 text-white">
+    <div className="min-h-screen px-4 py-8 pb-24" style={{ background: 'var(--bg)', color: 'var(--text)' }}>
       <div className="mx-auto max-w-md space-y-4">
-        <h1 className="text-2xl font-bold">Settings</h1>
+        <p className="eyebrow">Hunter Config</p>
+        <h1 className="page-title mb-2">Settings</h1>
 
-        {error && <p className="rounded bg-red-500/10 px-3 py-2 text-sm text-red-300">{error}</p>}
+        {error && <p className="status-error">{error}</p>}
 
-        <div className="rounded-lg bg-slate-800 p-4 shadow-lg">
-          <p className="text-sm text-slate-300">Which days are you free to train?</p>
-          <div className="mt-2 grid grid-cols-7 gap-1">
+        <div className="bracket-panel">
+          <div className="bl" /><div className="br" />
+          <div className="divider" style={{ margin: '0 0 10px' }}><span>Free Days</span></div>
+          <div className="grid grid-cols-7 gap-1">
             {DAYS.map((day, index) => (
-              <label
-                key={day}
-                className="flex flex-col items-center gap-1 rounded border border-slate-600 py-2 text-xs text-slate-300"
-              >
+              <label key={day} className={`day-toggle ${freeDays.includes(index) ? 'is-active' : ''}`}>
                 <span>{day}</span>
                 <input type="checkbox" checked={freeDays.includes(index)} onChange={() => toggleDay(index)} />
               </label>
             ))}
           </div>
 
-          <label className="mt-4 block text-sm text-slate-300">
+          <label className="field-label mt-4 block">
             Protein target (g)
             <input
               type="number"
@@ -114,64 +113,57 @@ export default function Settings({ session, userRow, onUserRowChange }) {
                 setProteinTarget(e.target.value)
                 setSaved(false)
               }}
-              className="mt-1 w-full rounded border border-slate-600 bg-slate-900 px-2 py-2 text-white focus:border-blue-500 focus:outline-none"
+              className="field-input mt-1"
             />
           </label>
 
-          {saved && <p className="mt-3 text-sm text-green-400">Saved</p>}
-          <button
-            onClick={saveSettings}
-            disabled={submitting === 'save'}
-            className="mt-3 w-full rounded bg-blue-500 px-4 py-2 font-medium text-white hover:bg-blue-400 disabled:opacity-50"
-          >
-            {submitting === 'save' ? 'Saving…' : 'Save changes'}
+          {saved && <p className="status-ok mt-3">Saved</p>}
+          <button onClick={saveSettings} disabled={submitting === 'save'} className="quest-btn mt-3">
+            {submitting === 'save' ? '[ Saving… ]' : '[ Save changes ]'}
           </button>
         </div>
 
-        <div className="rounded-lg border border-red-500/40 bg-slate-800 p-4 shadow-lg">
-          <h2 className="font-semibold text-red-300">Danger Zone</h2>
-          <p className="mt-1 text-sm text-slate-300">
+        <div className="bracket-panel" style={{ borderColor: 'var(--error)' }}>
+          <div className="bl" style={{ borderColor: 'var(--error)' }} /><div className="br" style={{ borderColor: 'var(--error)' }} />
+          <div className="divider" style={{ margin: '0 0 10px' }}>
+            <span style={{ color: 'var(--error)' }}>Danger Zone</span>
+          </div>
+          <p className="text-sm" style={{ color: 'var(--text-dim)' }}>
             Permanently clears your quest history, weigh-ins, trials, and achievements, and resets your tier and XP.
             Your profile stays.
           </p>
 
           {resetDone ? (
-            <p className="mt-3 text-sm text-green-400">All data reset.</p>
+            <p className="status-ok mt-3">All data reset.</p>
           ) : resetConfirming ? (
             <div className="mt-3 space-y-2">
-              <p className="text-sm font-medium text-red-300">Are you sure? This cannot be undone.</p>
+              <p className="status-error">Are you sure? This cannot be undone.</p>
               <div className="flex gap-2">
                 <button
                   onClick={resetAllData}
                   disabled={submitting === 'reset'}
-                  className="flex-1 rounded bg-red-600 px-4 py-2 font-medium text-white hover:bg-red-500 disabled:opacity-50"
+                  className="quest-btn is-danger flex-1"
                 >
-                  {submitting === 'reset' ? 'Resetting…' : 'Yes, reset everything'}
+                  {submitting === 'reset' ? '[ Resetting… ]' : '[ Yes, reset everything ]'}
                 </button>
                 <button
                   onClick={() => setResetConfirming(false)}
                   disabled={submitting === 'reset'}
-                  className="flex-1 rounded bg-slate-700 px-4 py-2 font-medium text-white hover:bg-slate-600 disabled:opacity-50"
+                  className="quest-btn is-quiet flex-1"
                 >
-                  Cancel
+                  [ Cancel ]
                 </button>
               </div>
             </div>
           ) : (
-            <button
-              onClick={() => setResetConfirming(true)}
-              className="mt-3 w-full rounded bg-red-600/80 px-4 py-2 font-medium text-white hover:bg-red-500"
-            >
-              Reset all data
+            <button onClick={() => setResetConfirming(true)} className="quest-btn is-danger mt-3">
+              [ Reset all data ]
             </button>
           )}
         </div>
 
-        <button
-          onClick={() => supabase.auth.signOut()}
-          className="w-full rounded bg-slate-800 px-4 py-2 text-sm text-slate-300 shadow-lg hover:bg-slate-700"
-        >
-          Sign out
+        <button onClick={() => supabase.auth.signOut()} className="quest-btn is-quiet">
+          [ Sign out ]
         </button>
       </div>
     </div>

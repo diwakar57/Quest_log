@@ -26,10 +26,10 @@ function rankForLevel(level) {
 }
 
 const STATS = [
-  { field: 'strength_xp', label: 'Strength', color: 'bg-red-500' },
-  { field: 'endurance_xp', label: 'Endurance', color: 'bg-green-500' },
-  { field: 'discipline_xp', label: 'Discipline', color: 'bg-blue-500' },
-  { field: 'nutrition_xp', label: 'Nutrition', color: 'bg-yellow-500' },
+  { field: 'strength_xp', label: 'Strength' },
+  { field: 'endurance_xp', label: 'Endurance' },
+  { field: 'discipline_xp', label: 'Discipline' },
+  { field: 'nutrition_xp', label: 'Nutrition' },
 ]
 
 export default function Character({ session }) {
@@ -59,7 +59,7 @@ export default function Character({ session }) {
 
   if (error) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-slate-900 px-6 text-center text-red-300">
+      <div className="status-error flex min-h-screen items-center justify-center px-6 text-center" style={{ background: 'var(--bg)' }}>
         {error}
       </div>
     )
@@ -67,7 +67,9 @@ export default function Character({ session }) {
 
   if (xpStats === undefined || unlockedKeys === undefined) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-slate-900 text-slate-400">Loading…</div>
+      <div className="mono flex min-h-screen items-center justify-center text-sm" style={{ background: 'var(--bg)', color: 'var(--text-dim)' }}>
+        Loading…
+      </div>
     )
   }
 
@@ -79,60 +81,51 @@ export default function Character({ session }) {
   const progress = Math.min(1, (totalXp - currentThreshold) / (nextThreshold - currentThreshold))
 
   return (
-    <div className="min-h-screen bg-slate-900 px-4 py-8 pb-24 text-white">
-      <div className="mx-auto max-w-md space-y-6">
-        <h1 className="text-2xl font-bold">Character</h1>
+    <div className="min-h-screen px-4 py-8 pb-24" style={{ background: 'var(--bg)', color: 'var(--text)' }}>
+      <div className="mx-auto max-w-md">
+        <p className="eyebrow">Hunter Data</p>
+        <h1 className="page-title mb-4">Character</h1>
 
-        <div className="rounded-lg bg-slate-800 p-6 text-center shadow-lg">
-          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-500 text-2xl font-bold">
-            {rank}
+        <div className="bracket-panel">
+          <div className="bl" /><div className="br" />
+          <div className="status-head">
+            <span className="status-title">Status</span>
+            <span className="rank-tag">Rank <b>{rank}</b></span>
           </div>
-          <p className="mt-3 text-lg font-semibold">Level {level}</p>
-          <p className="text-sm text-slate-400">{totalXp} XP total</p>
 
-          <div className="mt-4">
-            <div className="h-3 w-full overflow-hidden rounded-full bg-slate-700">
-              <div className="h-full bg-blue-500" style={{ width: `${Math.round(progress * 100)}%` }} />
-            </div>
-            <p className="mt-1 text-xs text-slate-400">
-              {totalXp - currentThreshold} / {nextThreshold - currentThreshold} XP to level {level + 1}
-            </p>
+          <div className="stat-line"><span className="k">LEVEL</span><span className="v mono">{String(level).padStart(2, '0')}</span></div>
+          <div className="bar-track"><div className="bar-fill" style={{ width: `${Math.round(progress * 100)}%` }} /></div>
+          <div className="bar-caption">
+            <span>{totalXp - currentThreshold} / {nextThreshold - currentThreshold} XP</span>
+            <span>NEXT: LV {String(level + 1).padStart(2, '0')}</span>
           </div>
-        </div>
 
-        <div className="space-y-3">
-          {STATS.map((s) => {
-            const value = xpStats?.[s.field] ?? 0
-            const width = totalXp > 0 ? Math.round((value / totalXp) * 100) : 0
-            return (
-              <div key={s.field} className="rounded-lg bg-slate-800 p-4 shadow-lg">
-                <div className="flex items-center justify-between text-sm">
-                  <span className="font-medium">{s.label}</span>
-                  <span className="text-slate-400">{value} XP</span>
-                </div>
-                <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-slate-700">
-                  <div className={`h-full ${s.color}`} style={{ width: `${width}%` }} />
-                </div>
+          <div className="divider"><span>Attributes</span></div>
+          <div className="stat-grid">
+            {STATS.map((s) => (
+              <div key={s.field} className="stat-cell">
+                <div className="lbl">{s.label}</div>
+                <div className="num">{xpStats?.[s.field] ?? 0}</div>
               </div>
-            )
-          })}
-        </div>
+            ))}
+          </div>
 
-        <div className="rounded-lg bg-slate-800 p-4 shadow-lg">
-          <h2 className="font-semibold text-white">Achievements</h2>
+          <div className="divider"><span>Achievements</span></div>
           {unlockedKeys.size === 0 ? (
-            <p className="mt-2 text-sm text-slate-400">None unlocked yet — complete quests to earn your first one.</p>
+            <p className="mono text-xs" style={{ color: 'var(--text-dim)' }}>
+              None unlocked yet — complete quests to earn your first one.
+            </p>
           ) : (
-            <ul className="mt-3 space-y-2">
+            <ul className="space-y-2">
               {achievements
                 .filter((a) => unlockedKeys.has(a.key))
                 .map((a) => (
-                  <li key={a.key} className="flex items-center justify-between text-sm">
-                    <span>
-                      🏆 <span className="font-medium text-white">{a.name}</span>
-                      <span className="ml-1 text-slate-400">— {a.condition}</span>
+                  <li key={a.key} className="flex items-start justify-between gap-3 text-xs">
+                    <span className="mono">
+                      <span style={{ color: 'var(--cyan)' }}>{a.name}</span>
+                      <span style={{ color: 'var(--text-dim)' }}> — {a.condition}</span>
                     </span>
-                    <span className="shrink-0 text-xs text-slate-500">{unlockedKeys.get(a.key)}</span>
+                    <span className="mono shrink-0" style={{ color: 'var(--text-dim)' }}>{unlockedKeys.get(a.key)}</span>
                   </li>
                 ))}
             </ul>

@@ -13,7 +13,7 @@
       "file_type": "code",
       "norm_label": "app()",
       "source_file": "src/App.jsx",
-      "source_location": "L50"
+      "source_location": "L64"
     },
     {
       "id": "src_app_bottomnav",
@@ -25,7 +25,7 @@
       "file_type": "code",
       "norm_label": "bottomnav()",
       "source_file": "src/App.jsx",
-      "source_location": "L25"
+      "source_location": "L30"
     },
     {
       "id": "src_app_debugdatebanner",
@@ -38,6 +38,18 @@
       "norm_label": "debugdatebanner()",
       "source_file": "src/App.jsx",
       "source_location": "L11"
+    },
+    {
+      "id": "src_app_loadingscreen",
+      "label": "LoadingScreen()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "loadingscreen()",
+      "source_file": "src/App.jsx",
+      "source_location": "L56"
     },
     {
       "id": "src_lib_onboarding_activedebugdate",
@@ -649,7 +661,7 @@
       "file_type": "code",
       "norm_label": "load()",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L131"
+      "source_location": "L134"
     },
     {
       "id": "src_lib_streaklogic_computemultiplier",
@@ -733,7 +745,7 @@
       "file_type": "code",
       "norm_label": "today()",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L110"
+      "source_location": "L113"
     },
     {
       "id": "src_pages_today_today_addxp",
@@ -745,7 +757,7 @@
       "file_type": "code",
       "norm_label": "addxp()",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L244"
+      "source_location": "L247"
     },
     {
       "id": "src_pages_today_today_cleartrial",
@@ -757,7 +769,7 @@
       "file_type": "code",
       "norm_label": "cleartrial()",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L423"
+      "source_location": "L426"
     },
     {
       "id": "src_pages_today_today_commitmealsidenumber",
@@ -769,7 +781,7 @@
       "file_type": "code",
       "norm_label": "commitmealsidenumber()",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L359"
+      "source_location": "L362"
     },
     {
       "id": "src_pages_today_today_commitprotein",
@@ -781,7 +793,7 @@
       "file_type": "code",
       "norm_label": "commitprotein()",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L337"
+      "source_location": "L340"
     },
     {
       "id": "src_pages_today_today_completemealsideboolean",
@@ -793,7 +805,7 @@
       "file_type": "code",
       "norm_label": "completemealsideboolean()",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L381"
+      "source_location": "L384"
     },
     {
       "id": "src_pages_today_today_completerest",
@@ -805,7 +817,7 @@
       "file_type": "code",
       "norm_label": "completerest()",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L310"
+      "source_location": "L313"
     },
     {
       "id": "src_pages_today_today_completeworkout",
@@ -817,7 +829,7 @@
       "file_type": "code",
       "norm_label": "completeworkout()",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L291"
+      "source_location": "L294"
     },
     {
       "id": "src_pages_today_today_logweight",
@@ -829,7 +841,7 @@
       "file_type": "code",
       "norm_label": "logweight()",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L401"
+      "source_location": "L404"
     },
     {
       "id": "src_pages_today_today_maybeawardmealxp",
@@ -841,7 +853,7 @@
       "file_type": "code",
       "norm_label": "maybeawardmealxp()",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L331"
+      "source_location": "L334"
     },
     {
       "id": "src_pages_today_today_refreshstreak",
@@ -853,7 +865,7 @@
       "file_type": "code",
       "norm_label": "refreshstreak()",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L274"
+      "source_location": "L277"
     },
     {
       "id": "src_pages_today_today_retrytrial",
@@ -865,7 +877,7 @@
       "file_type": "code",
       "norm_label": "retrytrial()",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L449"
+      "source_location": "L452"
     },
     {
       "id": "src_pages_today_today_runachievementcheck",
@@ -877,7 +889,7 @@
       "file_type": "code",
       "norm_label": "runachievementcheck()",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L256"
+      "source_location": "L259"
     },
     {
       "id": "package",
@@ -1383,13 +1395,13 @@
       "source_location": "L1"
     },
     {
-      "id": "src_pages_progress_cell_classes",
-      "label": "CELL_CLASSES",
+      "id": "src_pages_progress_cell_style",
+      "label": "CELL_STYLE",
       "_origin": "ast",
       "community": 12,
       "community_name": "App.jsx",
       "file_type": "code",
-      "norm_label": "cell_classes",
+      "norm_label": "cell_style",
       "source_file": "src/pages/Progress.jsx",
       "source_location": "L70"
     },
@@ -3345,7 +3357,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Character.jsx",
-      "source_location": "L75",
+      "source_location": "L77",
       "weight": 1.0
     },
     {
@@ -3357,7 +3369,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Character.jsx",
-      "source_location": "L76",
+      "source_location": "L78",
       "weight": 1.0
     },
     {
@@ -3369,7 +3381,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Character.jsx",
-      "source_location": "L77",
+      "source_location": "L79",
       "weight": 1.0
     },
     {
@@ -3429,7 +3441,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Progress.jsx",
-      "source_location": "L157",
+      "source_location": "L159",
       "weight": 1.0
     },
     {
@@ -3441,7 +3453,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Progress.jsx",
-      "source_location": "L158",
+      "source_location": "L160",
       "weight": 1.0
     },
     {
@@ -3453,7 +3465,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Progress.jsx",
-      "source_location": "L221",
+      "source_location": "L228",
       "weight": 1.0
     },
     {
@@ -3573,7 +3585,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L112",
+      "source_location": "L115",
       "weight": 1.0
     },
     {
@@ -3585,7 +3597,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L480",
+      "source_location": "L485",
       "weight": 1.0
     },
     {
@@ -3597,7 +3609,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L481",
+      "source_location": "L486",
       "weight": 1.0
     },
     {
@@ -3609,7 +3621,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L505",
+      "source_location": "L511",
       "weight": 1.0
     },
     {
@@ -3621,7 +3633,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L245",
+      "source_location": "L248",
       "weight": 1.0
     },
     {
@@ -3633,7 +3645,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L441",
+      "source_location": "L444",
       "weight": 1.0
     },
     {
@@ -3645,7 +3657,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L363",
+      "source_location": "L366",
       "weight": 1.0
     },
     {
@@ -3657,7 +3669,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L371",
+      "source_location": "L374",
       "weight": 1.0
     },
     {
@@ -3669,7 +3681,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L373",
+      "source_location": "L376",
       "weight": 1.0
     },
     {
@@ -3681,7 +3693,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L349",
+      "source_location": "L352",
       "weight": 1.0
     },
     {
@@ -3693,7 +3705,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L351",
+      "source_location": "L354",
       "weight": 1.0
     },
     {
@@ -3705,7 +3717,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L391",
+      "source_location": "L394",
       "weight": 1.0
     },
     {
@@ -3717,7 +3729,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L393",
+      "source_location": "L396",
       "weight": 1.0
     },
     {
@@ -3729,7 +3741,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L319",
+      "source_location": "L322",
       "weight": 1.0
     },
     {
@@ -3741,7 +3753,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L321",
+      "source_location": "L324",
       "weight": 1.0
     },
     {
@@ -3753,7 +3765,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L300",
+      "source_location": "L303",
       "weight": 1.0
     },
     {
@@ -3765,7 +3777,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L302",
+      "source_location": "L305",
       "weight": 1.0
     },
     {
@@ -3777,7 +3789,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L162",
+      "source_location": "L165",
       "weight": 1.0
     },
     {
@@ -3789,7 +3801,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L190",
+      "source_location": "L193",
       "weight": 1.0
     },
     {
@@ -3801,7 +3813,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L333",
+      "source_location": "L336",
       "weight": 1.0
     },
     {
@@ -3813,7 +3825,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L275",
+      "source_location": "L278",
       "weight": 1.0
     },
     {
@@ -3825,7 +3837,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L258",
+      "source_location": "L261",
       "weight": 1.0
     },
     {
@@ -3861,7 +3873,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L131",
+      "source_location": "L134",
       "weight": 1.0
     },
     {
@@ -3873,7 +3885,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L274",
+      "source_location": "L277",
       "weight": 1.0
     },
     {
@@ -3885,7 +3897,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L291",
+      "source_location": "L294",
       "weight": 1.0
     },
     {
@@ -3897,7 +3909,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L310",
+      "source_location": "L313",
       "weight": 1.0
     },
     {
@@ -3909,7 +3921,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L359",
+      "source_location": "L362",
       "weight": 1.0
     },
     {
@@ -3921,7 +3933,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L423",
+      "source_location": "L426",
       "weight": 1.0
     },
     {
@@ -3933,7 +3945,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L449",
+      "source_location": "L452",
       "weight": 1.0
     },
     {
@@ -6751,7 +6763,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/App.jsx",
-      "source_location": "L25",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "src_app",
+      "target": "src_app_loadingscreen",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/App.jsx",
+      "source_location": "L56",
       "weight": 1.0
     },
     {
@@ -6762,7 +6785,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/App.jsx",
-      "source_location": "L50",
+      "source_location": "L64",
       "weight": 1.0
     },
     {
@@ -7372,7 +7395,7 @@
     },
     {
       "source": "src_pages_progress",
-      "target": "src_pages_progress_cell_classes",
+      "target": "src_pages_progress_cell_style",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -7444,7 +7467,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L110",
+      "source_location": "L113",
       "weight": 1.0
     },
     {
@@ -7499,7 +7522,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L244",
+      "source_location": "L247",
       "weight": 1.0
     },
     {
@@ -7510,7 +7533,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L256",
+      "source_location": "L259",
       "weight": 1.0
     },
     {
@@ -7521,7 +7544,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L331",
+      "source_location": "L334",
       "weight": 1.0
     },
     {
@@ -7532,7 +7555,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L337",
+      "source_location": "L340",
       "weight": 1.0
     },
     {
@@ -7543,7 +7566,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L381",
+      "source_location": "L384",
       "weight": 1.0
     },
     {
@@ -7554,10 +7577,10 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L401",
+      "source_location": "L404",
       "weight": 1.0
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "296eda18b00bfdbec7878d9ca362a27eaf33390a"
+  "built_at_commit": "208ce863bae916b09cafdf6145b43c585194478b"
 }

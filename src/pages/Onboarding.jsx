@@ -84,20 +84,17 @@ export default function Onboarding({ session, onComplete }) {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-slate-900 py-10">
-      <form
-        onSubmit={handleSubmit}
-        className="w-full max-w-md space-y-6 rounded-lg bg-slate-800 px-8 py-6 shadow-lg"
-      >
+    <div className="flex min-h-screen items-center justify-center px-4 py-10" style={{ background: 'var(--bg)' }}>
+      <form onSubmit={handleSubmit} className="bracket-panel w-full max-w-md space-y-6">
+        <div className="bl" /><div className="br" />
         <div>
-          <h1 className="text-2xl font-bold text-white">Set up your profile</h1>
-          <p className="mt-1 text-sm text-slate-300">
-            This only takes a minute.
-          </p>
+          <p className="eyebrow">New Hunter</p>
+          <h1 className="page-title">Set up your profile</h1>
+          <p className="mt-1 text-sm" style={{ color: 'var(--text-dim)' }}>This only takes a minute.</p>
         </div>
 
         <div className="grid grid-cols-3 gap-3">
-          <label className="block text-sm text-slate-300">
+          <label className="field-label">
             Height (cm)
             <input
               type="number"
@@ -105,10 +102,10 @@ export default function Onboarding({ session, onComplete }) {
               min="1"
               value={heightCm}
               onChange={(e) => setHeightCm(e.target.value)}
-              className="mt-1 w-full rounded border border-slate-600 bg-slate-900 px-2 py-2 text-white focus:border-blue-500 focus:outline-none"
+              className="field-input mt-1"
             />
           </label>
-          <label className="block text-sm text-slate-300">
+          <label className="field-label">
             Weight (kg)
             <input
               type="number"
@@ -117,10 +114,10 @@ export default function Onboarding({ session, onComplete }) {
               step="0.1"
               value={startingWeight}
               onChange={(e) => setStartingWeight(e.target.value)}
-              className="mt-1 w-full rounded border border-slate-600 bg-slate-900 px-2 py-2 text-white focus:border-blue-500 focus:outline-none"
+              className="field-input mt-1"
             />
           </label>
-          <label className="block text-sm text-slate-300">
+          <label className="field-label">
             Age
             <input
               type="number"
@@ -128,31 +125,22 @@ export default function Onboarding({ session, onComplete }) {
               min="1"
               value={age}
               onChange={(e) => setAge(e.target.value)}
-              className="mt-1 w-full rounded border border-slate-600 bg-slate-900 px-2 py-2 text-white focus:border-blue-500 focus:outline-none"
+              className="field-input mt-1"
             />
           </label>
         </div>
 
-        <div>
-          <p className="text-sm text-slate-300">Which days are you free to train?</p>
-          <div className="mt-2 grid grid-cols-7 gap-1">
-            {DAYS.map((day, index) => (
-              <label
-                key={day}
-                className="flex flex-col items-center gap-1 rounded border border-slate-600 py-2 text-xs text-slate-300"
-              >
-                <span>{day}</span>
-                <input
-                  type="checkbox"
-                  checked={freeDays.includes(index)}
-                  onChange={() => toggleDay(index)}
-                />
-              </label>
-            ))}
-          </div>
+        <div className="divider"><span>Which days are you free to train?</span></div>
+        <div className="grid grid-cols-7 gap-1">
+          {DAYS.map((day, index) => (
+            <label key={day} className={`day-toggle ${freeDays.includes(index) ? 'is-active' : ''}`}>
+              <span>{day}</span>
+              <input type="checkbox" checked={freeDays.includes(index)} onChange={() => toggleDay(index)} />
+            </label>
+          ))}
         </div>
 
-        <label className="block text-sm text-slate-300">
+        <label className="field-label">
           Protein target (g)
           <input
             type="number"
@@ -160,18 +148,14 @@ export default function Onboarding({ session, onComplete }) {
             min="1"
             value={proteinTarget}
             onChange={(e) => setProteinTarget(e.target.value)}
-            className="mt-1 w-full rounded border border-slate-600 bg-slate-900 px-2 py-2 text-white focus:border-blue-500 focus:outline-none"
+            className="field-input mt-1"
           />
         </label>
 
-        {error && <p className="text-sm text-red-400">{error}</p>}
+        {error && <p className="status-error">{error}</p>}
 
-        <button
-          type="submit"
-          disabled={submitting}
-          className="w-full rounded bg-blue-500 px-4 py-2 font-medium text-white hover:bg-blue-400 disabled:opacity-50"
-        >
-          {submitting ? 'Saving…' : 'Start'}
+        <button type="submit" disabled={submitting} className="quest-btn">
+          {submitting ? '[ Saving… ]' : '[ Start ]'}
         </button>
       </form>
     </div>

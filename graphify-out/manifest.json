@@ -18,9 +18,9 @@
     "semantic_hash": ""
   },
   "src/App.jsx": {
-    "mtime": 1788474283.3218634,
-    "seen": 1788474323.8574371,
-    "ast_hash": "0d0379c268a31693301bd30f54940c03",
+    "mtime": 1788479975.5132296,
+    "seen": 1788480447.247145,
+    "ast_hash": "332836499055a25a4d032659abf5faed",
     "semantic_hash": ""
   },
   "src/lib/supabaseClient.js": {
@@ -36,9 +36,9 @@
     "semantic_hash": "e13723e2574429d9a6d849727e3ff695"
   },
   "vite.config.js": {
-    "mtime": 1788470672.2724912,
-    "seen": 1788470806.21864,
-    "ast_hash": "2377e82707408ca7da4b7e545403edf9",
+    "mtime": 1788480189.1178682,
+    "seen": 1788480447.2487168,
+    "ast_hash": "1cab8889d8626f3f3296c8e15bf0cd3c",
     "semantic_hash": ""
   },
   ".claude/CLAUDE.md": {
@@ -126,9 +126,9 @@
     "semantic_hash": ""
   },
   "index.html": {
-    "mtime": 1788470683.9949934,
-    "seen": 1788470806.2198205,
-    "ast_hash": "4286e3e89e4b898b93b91a6cb9f63dec",
+    "mtime": 1788479902.7042,
+    "seen": 1788480447.249916,
+    "ast_hash": "587af240645dff47403f88dfe584164f",
     "semantic_hash": ""
   },
   "Claude_Code_Build_Tasks.pdf": {
@@ -180,21 +180,21 @@
     "semantic_hash": ""
   },
   "src/pages/Login.jsx": {
-    "mtime": 1788477848.3595488,
-    "seen": 1788477889.4426217,
-    "ast_hash": "8c75c53eb82be1138a0b73ebe5dcc5e7",
+    "mtime": 1788480001.9229028,
+    "seen": 1788480447.2487104,
+    "ast_hash": "c0e054d889ea715cc0a56214ada2a1c1",
     "semantic_hash": ""
   },
   "src/pages/Onboarding.jsx": {
-    "mtime": 1788396241.7313414,
-    "seen": 1788396259.7286878,
-    "ast_hash": "c4369e4f00bb0b9193777b7d8291bd8e",
+    "mtime": 1788480019.7650635,
+    "seen": 1788480447.2487116,
+    "ast_hash": "6243d8da12f2f97161f95f6d2f07287a",
     "semantic_hash": ""
   },
   "src/pages/Today.jsx": {
-    "mtime": 1788474296.7819397,
-    "seen": 1788474323.8588946,
-    "ast_hash": "aa1fcabb6331b6422dfee547517352ad",
+    "mtime": 1788480357.0695035,
+    "seen": 1788480447.2487156,
+    "ast_hash": "88790659cdb5cb3050d15be7885428bd",
     "semantic_hash": ""
   },
   "src/content/achievements.js": {
@@ -258,15 +258,15 @@
     "semantic_hash": ""
   },
   "src/pages/Character.jsx": {
-    "mtime": 1788469317.2606492,
-    "seen": 1788469354.7979808,
-    "ast_hash": "b231f22f18c07c1ba8c6bb63400613f5",
+    "mtime": 1788480047.0450275,
+    "seen": 1788480447.248707,
+    "ast_hash": "8729c72ce9fe5dbff040ba4cb83ace26",
     "semantic_hash": ""
   },
   "src/pages/Progress.jsx": {
-    "mtime": 1788448407.7878914,
-    "seen": 1788448486.2470167,
-    "ast_hash": "b39683135658fa43e9137ea6cc1a1fc5",
+    "mtime": 1788480082.7034557,
+    "seen": 1788480447.248713,
+    "ast_hash": "c967e354e06574b9f49c77b6a4601f09",
     "semantic_hash": ""
   },
   "src/lib/achievementLogic.js": {
@@ -276,9 +276,9 @@
     "semantic_hash": ""
   },
   "src/pages/Settings.jsx": {
-    "mtime": 1788469980.6510706,
-    "seen": 1788470305.4562058,
-    "ast_hash": "6a0e84894c24334624caa45978fd9979",
+    "mtime": 1788480104.5272205,
+    "seen": 1788480447.2487142,
+    "ast_hash": "41a940a2ea8bdb3f9ccdcb0f42e7dc2c",
     "semantic_hash": ""
   },
   "public/apple-touch-icon.png": {
@@ -303,6 +303,12 @@
     "mtime": 1788470662.4649417,
     "seen": 1788470806.2201488,
     "ast_hash": "008cfbd2d657d3d02912b0d1467bd6a6",
+    "semantic_hash": ""
+  },
+  "concept_C_hunter_status.html": {
+    "mtime": 1788479806.625488,
+    "seen": 1788480447.2499146,
+    "ast_hash": "83a891ec756612406aec70a15f6434d7",
     "semantic_hash": ""
   }
 }

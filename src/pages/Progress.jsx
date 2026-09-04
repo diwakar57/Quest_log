@@ -3,7 +3,7 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts'
 import { supabase } from '../lib/supabaseClient'
 import { todayISODate } from '../lib/onboarding'
 
-const SERIES_COLOR = '#3b82f6' // matches the app's existing blue-500 accent
+const SERIES_COLOR = '#3FA9E0' // --cyan
 const CHART_HEIGHT = 240
 const GRID_WEEKS = 12
 const GRID_DAYS = GRID_WEEKS * 7
@@ -67,20 +67,20 @@ function dayCompletionLevel(row, isFuture) {
   return 'miss'
 }
 
-const CELL_CLASSES = {
-  filled: 'bg-blue-500',
-  half: 'bg-blue-500/40',
-  miss: 'bg-slate-700',
-  future: 'border border-slate-600',
+const CELL_STYLE = {
+  filled: { background: 'var(--cyan)' },
+  half: { background: 'var(--cyan-dim)' },
+  miss: { background: 'var(--line)' },
+  future: { border: '1px solid var(--line)' },
 }
 
 function ChartTooltip({ active, payload, label }) {
   if (!active || !payload || payload.length === 0) return null
   return (
-    <div className="rounded border border-slate-700 bg-slate-800 px-3 py-2 shadow-lg">
-      <p className="text-xs text-slate-400">{label}</p>
-      <p className="mt-0.5 flex items-center gap-1.5 text-sm font-semibold text-white">
-        <span className="inline-block h-0.5 w-3 rounded-full" style={{ backgroundColor: SERIES_COLOR }} />
+    <div className="mono border px-3 py-2" style={{ background: 'var(--panel)', borderColor: 'var(--line)' }}>
+      <p className="text-xs" style={{ color: 'var(--text-dim)' }}>{label}</p>
+      <p className="mt-0.5 flex items-center gap-1.5 text-sm font-semibold" style={{ color: 'var(--text)' }}>
+        <span className="inline-block h-0.5 w-3" style={{ backgroundColor: SERIES_COLOR }} />
         {payload[0].value} kg
       </p>
     </div>
@@ -142,7 +142,7 @@ export default function Progress({ session, userRow }) {
 
   if (error) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-slate-900 px-6 text-center text-red-300">
+      <div className="status-error flex min-h-screen items-center justify-center px-6 text-center" style={{ background: 'var(--bg)' }}>
         {error}
       </div>
     )
@@ -150,7 +150,9 @@ export default function Progress({ session, userRow }) {
 
   if (logs === undefined || gridLogsByDate === undefined) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-slate-900 text-slate-400">Loading…</div>
+      <div className="mono flex min-h-screen items-center justify-center text-sm" style={{ background: 'var(--bg)', color: 'var(--text-dim)' }}>
+        Loading…
+      </div>
     )
   }
 
@@ -163,16 +165,20 @@ export default function Progress({ session, userRow }) {
   }
 
   return (
-    <div className="min-h-screen bg-slate-900 px-4 py-8 pb-24 text-white">
-      <div className="mx-auto max-w-md space-y-4">
-        <h1 className="text-2xl font-bold">Progress</h1>
+    <div className="min-h-screen px-4 py-8 pb-24" style={{ background: 'var(--bg)', color: 'var(--text)' }}>
+      <div className="mx-auto max-w-md">
+        <p className="eyebrow">Hunter Log</p>
+        <h1 className="page-title mb-4">Progress</h1>
 
         {logs.length === 0 ? (
-          <p className="text-sm text-slate-400">No weigh-ins logged yet — log one on Today to start your chart.</p>
+          <p className="mono mb-4 text-xs" style={{ color: 'var(--text-dim)' }}>
+            No weigh-ins logged yet — log one on Today to start your chart.
+          </p>
         ) : (
-          <div className="rounded-lg bg-slate-800 p-4 shadow-lg">
-            <p className="text-sm text-slate-300">Weight — 3-day moving average (kg)</p>
-            <div ref={chartRef} className="mt-2" style={{ height: CHART_HEIGHT }}>
+          <div className="bracket-panel mb-4">
+            <div className="bl" /><div className="br" />
+            <div className="divider" style={{ margin: '0 0 10px' }}><span>Weight — 3-day avg (kg)</span></div>
+            <div ref={chartRef} style={{ height: CHART_HEIGHT }}>
               {chartWidth > 0 && (
                 <LineChart
                   width={chartWidth}
@@ -180,22 +186,22 @@ export default function Progress({ session, userRow }) {
                   data={smoothed}
                   margin={{ top: 8, right: 8, bottom: 0, left: 0 }}
                 >
-                  <CartesianGrid stroke="#334155" strokeDasharray="0" vertical={false} />
+                  <CartesianGrid stroke="#1C2733" strokeDasharray="0" vertical={false} />
                   <XAxis
                     dataKey="date"
-                    stroke="#334155"
-                    tick={{ fontSize: 11, fill: '#94a3b8' }}
+                    stroke="#1C2733"
+                    tick={{ fontSize: 11, fill: '#5C6B7A' }}
                     tickLine={false}
                   />
                   <YAxis
-                    stroke="#334155"
-                    tick={{ fontSize: 11, fill: '#94a3b8' }}
+                    stroke="#1C2733"
+                    tick={{ fontSize: 11, fill: '#5C6B7A' }}
                     tickLine={false}
                     axisLine={false}
                     width={36}
                     domain={['auto', 'auto']}
                   />
-                  <Tooltip content={<ChartTooltip />} cursor={{ stroke: '#475569', strokeWidth: 1 }} />
+                  <Tooltip content={<ChartTooltip />} cursor={{ stroke: '#3FA9E0', strokeWidth: 1 }} />
                   <Line
                     type="monotone"
                     dataKey="weight"
@@ -204,7 +210,7 @@ export default function Progress({ session, userRow }) {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     dot={false}
-                    activeDot={{ r: 5, fill: SERIES_COLOR, stroke: '#1e293b', strokeWidth: 2 }}
+                    activeDot={{ r: 5, fill: SERIES_COLOR, stroke: '#0D1117', strokeWidth: 2 }}
                   />
                 </LineChart>
               )}
@@ -212,37 +218,24 @@ export default function Progress({ session, userRow }) {
           </div>
         )}
 
-        <div className="rounded-lg bg-slate-800 p-4 shadow-lg">
-          <p className="text-sm text-slate-300">12-Week Grid</p>
-          <div className="mt-3 space-y-1">
+        <div className="bracket-panel">
+          <div className="bl" /><div className="br" />
+          <div className="divider" style={{ margin: '0 0 10px' }}><span>12-Week Grid</span></div>
+          <div className="space-y-1">
             {gridWeeks.map((week, weekIdx) => (
               <div key={weekIdx} className="flex gap-1">
                 {week.map((dateStr) => {
                   const level = dayCompletionLevel(gridLogsByDate[dateStr], dateStr > today)
-                  return (
-                    <div
-                      key={dateStr}
-                      title={dateStr}
-                      className={`h-5 w-5 rounded-sm ${CELL_CLASSES[level]}`}
-                    />
-                  )
+                  return <div key={dateStr} title={dateStr} className="h-5 w-5" style={CELL_STYLE[level]} />
                 })}
               </div>
             ))}
           </div>
-          <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-slate-400">
-            <span className="flex items-center gap-1.5">
-              <span className={`h-3 w-3 rounded-sm ${CELL_CLASSES.filled}`} /> Both done
-            </span>
-            <span className="flex items-center gap-1.5">
-              <span className={`h-3 w-3 rounded-sm ${CELL_CLASSES.half}`} /> One done
-            </span>
-            <span className="flex items-center gap-1.5">
-              <span className={`h-3 w-3 rounded-sm ${CELL_CLASSES.miss}`} /> Missed
-            </span>
-            <span className="flex items-center gap-1.5">
-              <span className={`h-3 w-3 rounded-sm ${CELL_CLASSES.future}`} /> Upcoming
-            </span>
+          <div className="mono mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs" style={{ color: 'var(--text-dim)' }}>
+            <span className="flex items-center gap-1.5"><span className="h-3 w-3" style={CELL_STYLE.filled} /> Both done</span>
+            <span className="flex items-center gap-1.5"><span className="h-3 w-3" style={CELL_STYLE.half} /> One done</span>
+            <span className="flex items-center gap-1.5"><span className="h-3 w-3" style={CELL_STYLE.miss} /> Missed</span>
+            <span className="flex items-center gap-1.5"><span className="h-3 w-3" style={CELL_STYLE.future} /> Upcoming</span>
           </div>
         </div>
       </div>

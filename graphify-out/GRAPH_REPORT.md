@@ -1,16 +1,16 @@
 # Graph Report - Quest_log  (2026-09-03)
 
 ## Corpus Check
-- 40 files · ~30,711 words
+- 40 files · ~31,132 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 258 nodes · 394 edges · 22 communities (16 shown, 5 thin omitted)
+- 259 nodes · 395 edges · 22 communities (16 shown, 5 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `296eda18`
+- Built from commit: `208ce863`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -132,14 +132,14 @@ Nodes (21): mealSidePools, restDayQuests, runProgression, trials, workoutPools, 
 
 ## Knowledge Gaps
 - **106 isolated node(s):** `$schema`, `oxc`, `react/rules-of-hooks`, `warn`, `name` (+101 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 134 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 135 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Today()` connect `Today` to `App.jsx`, `Today.jsx`?**
-  _High betweenness centrality (0.037) - this node is a cross-community bridge._
+  _High betweenness centrality (0.038) - this node is a cross-community bridge._
 - **Why does `react` connect `App.jsx` to `.oxlintrc.json`, `achievementLogic.js`, `Today.jsx`?**
   _High betweenness centrality (0.029) - this node is a cross-community bridge._
 - **Why does `plugins` connect `.oxlintrc.json` to `App.jsx`?**

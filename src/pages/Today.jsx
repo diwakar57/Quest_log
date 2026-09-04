@@ -83,26 +83,29 @@ function meetsTarget(value, mealSideQuest) {
   return mealSideQuest.comparison === 'gte' ? value >= mealSideQuest.target : value <= mealSideQuest.target
 }
 
-function QuestCard({ title, desc, xp, done, submitting, onComplete, badge }) {
+function QuestCard({ tag, icon, title, desc, xp, done, submitting, onComplete, optional }) {
   return (
-    <div className="rounded-lg bg-slate-800 p-4 shadow-lg">
-      <div className="flex items-center justify-between">
-        <h2 className="font-semibold text-white">{title}</h2>
-        {badge && <span className="rounded bg-slate-700 px-2 py-0.5 text-xs text-slate-300">{badge}</span>}
+    <div className="quest-panel">
+      <div className="bl" /><div className="br" />
+      <div className="quest-head">
+        <span className="quest-tag">
+          <i className={`ti ${icon}`} />
+          {tag}
+          {optional ? ' (Optional)' : ''}
+        </span>
+        <span className="quest-xp">+{xp} XP</span>
       </div>
-      <p className="mt-1 text-sm text-slate-300">{desc}</p>
-      <p className="mt-1 text-xs text-blue-300">{xp} XP</p>
-      {done ? (
-        <p className="mt-3 text-sm text-green-400">Completed</p>
-      ) : (
-        <button
-          onClick={onComplete}
-          disabled={submitting}
-          className="mt-3 w-full rounded bg-blue-500 px-4 py-2 font-medium text-white hover:bg-blue-400 disabled:opacity-50"
-        >
-          {submitting ? 'Saving…' : 'Mark complete'}
-        </button>
-      )}
+      <div className="quest-body">
+        <p className="quest-name">{title}</p>
+        <p className="quest-desc">{desc}</p>
+        {done ? (
+          <p className="status-ok">Completed</p>
+        ) : (
+          <button onClick={onComplete} disabled={submitting} className="quest-btn">
+            {submitting ? '[ Saving… ]' : '[ Complete quest ]'}
+          </button>
+        )}
+      </div>
     </div>
   )
 }
@@ -465,7 +468,7 @@ export default function Today({ session, userRow }) {
 
   if (error && (dailyLog === undefined || tier === undefined)) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-slate-900 px-6 text-center text-red-300">
+      <div className="status-error flex min-h-screen items-center justify-center px-6 text-center" style={{ background: 'var(--bg)' }}>
         {error}
       </div>
     )
@@ -473,7 +476,9 @@ export default function Today({ session, userRow }) {
 
   if (dailyLog === undefined || tier === undefined || lastWeightLog === undefined || pendingTrial === undefined) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-slate-900 text-slate-400">Loading…</div>
+      <div className="mono flex min-h-screen items-center justify-center text-sm" style={{ background: 'var(--bg)', color: 'var(--text-dim)' }}>
+        Loading…
+      </div>
     )
   }
 
@@ -482,61 +487,61 @@ export default function Today({ session, userRow }) {
   const trialContent = pendingTrial ? trials.find((t) => t.tier === pendingTrial.tier_number) : null
 
   return (
-    <div className="min-h-screen bg-slate-900 px-4 py-8 pb-24 text-white">
+    <div className="min-h-screen px-4 py-8 pb-24" style={{ background: 'var(--bg)', color: 'var(--text)' }}>
       {achievementToast && (
         <div
-          className="fixed left-1/2 z-50 w-[calc(100%-2rem)] max-w-xs -translate-x-1/2 rounded-lg bg-yellow-500 px-4 py-2 text-center text-sm font-semibold text-black shadow-lg"
-          style={{ top: 'calc(5rem + env(safe-area-inset-top))' }}
+          className="mono fixed left-1/2 z-50 w-[calc(100%-2rem)] max-w-xs -translate-x-1/2 border px-4 py-2 text-center text-xs uppercase tracking-wide"
+          style={{ top: 'calc(5rem + env(safe-area-inset-top))', background: 'var(--panel)', borderColor: 'var(--cyan)', color: 'var(--cyan)' }}
         >
-          🏆 Unlocked: {achievementToast}
+          Unlocked: {achievementToast}
         </div>
       )}
       <div className="mx-auto max-w-md space-y-4">
-        <h1 className="text-2xl font-bold">Today</h1>
+        <p className="eyebrow">Daily Log</p>
+        <h1 className="page-title mb-2">Today</h1>
 
-        {error && <p className="rounded bg-red-500/10 px-3 py-2 text-sm text-red-300">{error}</p>}
+        {error && <p className="status-error">{error}</p>}
 
-        <div className="flex items-center justify-between rounded-lg bg-slate-800 px-4 py-3 text-sm shadow-lg">
-          <span className="text-slate-300">
-            🔥 Streak: <span className="font-semibold text-white">{streak ?? '…'}</span>
-            {' '}· Best: <span className="font-semibold text-white">{bestStreak ?? '…'}</span>
-          </span>
-          <span className="font-semibold text-blue-300">
-            +{Math.round(computeMultiplier(streak ?? 0) * 100)}% XP
-          </span>
+        <div className="bracket-panel">
+          <div className="bl" /><div className="br" />
+          <div className="stat-line"><span className="k">STREAK</span><span className="v mono">{streak ?? '…'} DAYS</span></div>
+          <div className="stat-line"><span className="k">BEST</span><span className="v mono">{bestStreak ?? '…'} DAYS</span></div>
+          <div className="stat-line">
+            <span className="k">XP BOOST</span>
+            <span className="v mono" style={{ color: 'var(--cyan)' }}>+{Math.round(computeMultiplier(streak ?? 0) * 100)}%</span>
+          </div>
         </div>
 
         {pendingTrial && trialContent && (
-          <div className="rounded-lg border border-yellow-500/50 bg-slate-800 p-4 shadow-lg">
-            <h2 className="font-semibold text-yellow-300">⚔️ Trial: {trialContent.name}</h2>
-            <p className="mt-1 text-sm text-slate-300">{trialContent.criteria}</p>
-            <p className="mt-1 text-xs text-blue-300">{trialContent.xpReward} XP</p>
-            <div className="mt-3 flex gap-2">
-              <button
-                onClick={() => clearTrial(pendingTrial)}
-                disabled={submitting === 'trial'}
-                className="flex-1 rounded bg-green-600 px-4 py-2 font-medium text-white hover:bg-green-500 disabled:opacity-50"
-              >
-                Clear it
-              </button>
-              <button
-                onClick={() => retryTrial(pendingTrial)}
-                disabled={submitting === 'trial'}
-                className="flex-1 rounded bg-slate-700 px-4 py-2 font-medium text-white hover:bg-slate-600 disabled:opacity-50"
-              >
-                Not yet
-              </button>
+          <div className="quest-panel">
+            <div className="bl" /><div className="br" />
+            <div className="quest-head">
+              <span className="quest-tag"><i className="ti ti-sword" />Trial</span>
+              <span className="quest-xp">+{trialContent.xpReward} XP</span>
+            </div>
+            <div className="quest-body">
+              <p className="quest-name">{trialContent.name}</p>
+              <p className="quest-desc">{trialContent.criteria}</p>
+              <div className="flex gap-2">
+                <button onClick={() => clearTrial(pendingTrial)} disabled={submitting === 'trial'} className="quest-btn flex-1">
+                  [ Clear it ]
+                </button>
+                <button onClick={() => retryTrial(pendingTrial)} disabled={submitting === 'trial'} className="quest-btn is-quiet flex-1">
+                  [ Not yet ]
+                </button>
+              </div>
             </div>
           </div>
         )}
 
         {showWeighIn && (
-          <div className="rounded-lg bg-slate-800 p-4 shadow-lg">
-            <h2 className="font-semibold text-white">Weigh In</h2>
-            <p className="mt-1 text-sm text-slate-300">
+          <div className="bracket-panel">
+            <div className="bl" /><div className="br" />
+            <div className="divider" style={{ margin: '0 0 10px' }}><span>Weigh In</span></div>
+            <p className="mb-3 text-sm" style={{ color: 'var(--text-dim)' }}>
               {lastWeightLog ? "It's been a week — log your weight today." : 'Log your weight to start tracking progress.'}
             </p>
-            <div className="mt-3 flex gap-2">
+            <div className="flex gap-2">
               <input
                 type="number"
                 min="0"
@@ -544,14 +549,10 @@ export default function Today({ session, userRow }) {
                 placeholder="kg"
                 value={weightInput}
                 onChange={(e) => setWeightInput(e.target.value)}
-                className="w-full rounded border border-slate-600 bg-slate-900 px-2 py-2 text-white focus:border-blue-500 focus:outline-none"
+                className="field-input"
               />
-              <button
-                onClick={logWeight}
-                disabled={submitting === 'weight'}
-                className="shrink-0 rounded bg-blue-500 px-4 py-2 font-medium text-white hover:bg-blue-400 disabled:opacity-50"
-              >
-                {submitting === 'weight' ? 'Saving…' : 'Log weight'}
+              <button onClick={logWeight} disabled={submitting === 'weight'} className="quest-btn shrink-0" style={{ width: 'auto', padding: '10px 16px' }}>
+                {submitting === 'weight' ? '[ Saving… ]' : '[ Log ]'}
               </button>
             </div>
           </div>
@@ -559,6 +560,8 @@ export default function Today({ session, userRow }) {
 
         {quests.trainingToday ? (
           <QuestCard
+            tag="Workout Quest"
+            icon="ti-barbell"
             title={quests.workoutQuest.name}
             desc={quests.workoutQuest.desc}
             xp={quests.workoutQuest.xp}
@@ -568,60 +571,62 @@ export default function Today({ session, userRow }) {
           />
         ) : (
           <QuestCard
+            tag="Rest Quest"
+            icon="ti-moon"
             title={quests.restQuest.name}
             desc={quests.restQuest.desc}
             xp={quests.restQuest.xp}
             done={dailyLog.rest_quest_done}
             submitting={submitting === 'rest'}
             onComplete={() => completeRest(quests.restQuest)}
-            badge="Optional"
+            optional
           />
         )}
 
-        <div className="rounded-lg bg-slate-800 p-4 shadow-lg">
-          <h2 className="font-semibold text-white">Meal Quest</h2>
+        <div className="quest-panel">
+          <div className="bl" /><div className="br" />
+          <div className="quest-head">
+            <span className="quest-tag"><i className="ti ti-meat" />Meal Quest</span>
+          </div>
+          <div className="quest-body">
+            <div className="input-line">
+              <span>PROTEIN (G) — TARGET {userRow.protein_target}</span>
+              <input
+                type="number"
+                min="0"
+                placeholder="0"
+                value={proteinInput}
+                onChange={(e) => setProteinInput(e.target.value)}
+                onBlur={commitProtein}
+                disabled={dailyLog.meal_quest_done}
+              />
+            </div>
+            {dailyLog.meal_quest_done && <p className="status-ok mb-3">Protein target hit</p>}
 
-          <label className="mt-3 block text-sm text-slate-300">
-            Protein (g) — target {userRow.protein_target}g
-            <input
-              type="number"
-              min="0"
-              value={proteinInput}
-              onChange={(e) => setProteinInput(e.target.value)}
-              onBlur={commitProtein}
-              disabled={dailyLog.meal_quest_done}
-              className="mt-1 w-full rounded border border-slate-600 bg-slate-900 px-2 py-2 text-white focus:border-blue-500 focus:outline-none disabled:opacity-60"
-            />
-          </label>
-          {dailyLog.meal_quest_done && <p className="mt-1 text-sm text-green-400">Protein target hit</p>}
-
-          <div className="mt-4 border-t border-slate-700 pt-3">
-            <p className="text-sm text-slate-300">{quests.mealSideQuest.text}</p>
+            <p className="quest-desc">{quests.mealSideQuest.text}</p>
 
             {quests.mealSideQuest.type === 'number' ? (
               <>
-                <input
-                  type="number"
-                  min="0"
-                  step="0.1"
-                  placeholder={quests.mealSideQuest.unit}
-                  value={mealSideInput}
-                  onChange={(e) => setMealSideInput(e.target.value)}
-                  onBlur={() => commitMealSideNumber(quests.mealSideQuest)}
-                  disabled={dailyLog.meal_side_done}
-                  className="mt-2 w-full rounded border border-slate-600 bg-slate-900 px-2 py-2 text-white focus:border-blue-500 focus:outline-none disabled:opacity-60"
-                />
-                {dailyLog.meal_side_done && <p className="mt-1 text-sm text-green-400">Completed</p>}
+                <div className="input-line">
+                  <span>{quests.mealSideQuest.unit.toUpperCase()}</span>
+                  <input
+                    type="number"
+                    min="0"
+                    step="0.1"
+                    placeholder="0"
+                    value={mealSideInput}
+                    onChange={(e) => setMealSideInput(e.target.value)}
+                    onBlur={() => commitMealSideNumber(quests.mealSideQuest)}
+                    disabled={dailyLog.meal_side_done}
+                  />
+                </div>
+                {dailyLog.meal_side_done && <p className="status-ok">Completed</p>}
               </>
             ) : dailyLog.meal_side_done ? (
-              <p className="mt-2 text-sm text-green-400">Completed</p>
+              <p className="status-ok">Completed</p>
             ) : (
-              <button
-                onClick={completeMealSideBoolean}
-                disabled={submitting === 'mealSide'}
-                className="mt-2 w-full rounded bg-blue-500 px-4 py-2 font-medium text-white hover:bg-blue-400 disabled:opacity-50"
-              >
-                {submitting === 'mealSide' ? 'Saving…' : 'Mark complete'}
+              <button onClick={completeMealSideBoolean} disabled={submitting === 'mealSide'} className="quest-btn">
+                {submitting === 'mealSide' ? '[ Saving… ]' : '[ Complete quest ]'}
               </button>
             )}
           </div>

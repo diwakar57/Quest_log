@@ -14,10 +14,15 @@ function DebugDateBanner() {
 
   return (
     <div
-      className="fixed right-2 z-50 rounded bg-yellow-500/90 px-3 py-1.5 text-xs font-medium text-black shadow-lg"
-      style={{ top: 'calc(0.5rem + env(safe-area-inset-top))' }}
+      className="mono fixed right-2 z-50 border px-3 py-1.5 text-xs"
+      style={{
+        top: 'calc(0.5rem + env(safe-area-inset-top))',
+        background: 'var(--panel)',
+        borderColor: 'var(--cyan)',
+        color: 'var(--cyan)',
+      }}
     >
-      🐛 debugDate: {debugDate} — clear with ?debugDate=clear
+      DEBUG DATE: {debugDate} — CLEAR WITH ?debugDate=clear
     </div>
   )
 }
@@ -31,18 +36,27 @@ function BottomNav({ view, onChange }) {
   ]
   return (
     <div
-      className="fixed inset-x-0 bottom-0 z-40 flex border-t border-slate-700 bg-slate-800"
-      style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
+      className="fixed inset-x-0 bottom-0 z-40 flex"
+      style={{ borderTop: '1px solid var(--line)', background: 'var(--panel)', paddingBottom: 'env(safe-area-inset-bottom)' }}
     >
       {tabs.map((tab) => (
         <button
           key={tab.key}
           onClick={() => onChange(tab.key)}
-          className={`flex-1 py-3 text-sm font-medium ${view === tab.key ? 'text-blue-400' : 'text-slate-400'}`}
+          className="mono flex-1 py-3 text-xs tracking-widest uppercase"
+          style={{ color: view === tab.key ? 'var(--cyan)' : 'var(--text-dim)', background: 'none', border: 'none', cursor: 'pointer' }}
         >
           {tab.label}
         </button>
       ))}
+    </div>
+  )
+}
+
+function LoadingScreen() {
+  return (
+    <div className="flex min-h-screen items-center justify-center" style={{ background: 'var(--bg)' }}>
+      <span className="mono text-sm" style={{ color: 'var(--text-dim)' }}>Loading…</span>
     </div>
   )
 }
@@ -81,11 +95,11 @@ function App() {
   let content
   let showNav = false
   if (session === undefined) {
-    content = <div className="flex min-h-screen items-center justify-center bg-slate-900 text-slate-400">Loading…</div>
+    content = <LoadingScreen />
   } else if (!session) {
     content = <Login />
   } else if (userRow === undefined) {
-    content = <div className="flex min-h-screen items-center justify-center bg-slate-900 text-slate-400">Loading…</div>
+    content = <LoadingScreen />
   } else if (!userRow) {
     content = <Onboarding session={session} onComplete={setUserRow} />
   } else {
