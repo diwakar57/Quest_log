@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { supabase } from './lib/supabaseClient'
 import { activeDebugDate } from './lib/onboarding'
+import { setSoundEnabled, playClick } from './lib/sound'
 import Login from './pages/Login'
 import Onboarding from './pages/Onboarding'
 import Today from './pages/Today'
@@ -42,7 +43,10 @@ function BottomNav({ view, onChange }) {
       {tabs.map((tab) => (
         <button
           key={tab.key}
-          onClick={() => onChange(tab.key)}
+          onClick={() => {
+            playClick()
+            onChange(tab.key)
+          }}
           className="mono flex-1 py-3 text-xs tracking-widest uppercase"
           style={{ color: view === tab.key ? 'var(--cyan)' : 'var(--text-dim)', background: 'none', border: 'none', cursor: 'pointer' }}
         >
@@ -91,6 +95,12 @@ function App() {
       .maybeSingle()
       .then(({ data }) => setUserRow(data))
   }, [session])
+
+  // Keep sound.js's mute state in sync with the DB value, wherever it changes
+  // from (onboarding insert, Settings toggle, initial load).
+  useEffect(() => {
+    if (userRow) setSoundEnabled(userRow.sound_enabled ?? true)
+  }, [userRow])
 
   let content
   let showNav = false

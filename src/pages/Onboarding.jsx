@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { supabase } from '../lib/supabaseClient'
 import { DAYS, pickRunDay, todayISODate } from '../lib/onboarding'
+import { playClick, playError } from '../lib/sound'
 
 export default function Onboarding({ session, onComplete }) {
   const [heightCm, setHeightCm] = useState('')
@@ -12,6 +13,7 @@ export default function Onboarding({ session, onComplete }) {
   const [submitting, setSubmitting] = useState(false)
 
   function toggleDay(index) {
+    playClick()
     setFreeDays((prev) =>
       prev.includes(index) ? prev.filter((d) => d !== index) : [...prev, index]
     )
@@ -23,6 +25,7 @@ export default function Onboarding({ session, onComplete }) {
 
     if (freeDays.length === 0) {
       setError('Pick at least one day you’re free to train.')
+      playError()
       return
     }
 
@@ -50,6 +53,7 @@ export default function Onboarding({ session, onComplete }) {
     if (userError) {
       setError(userError.message)
       setSubmitting(false)
+      playError()
       return
     }
 
@@ -62,6 +66,7 @@ export default function Onboarding({ session, onComplete }) {
     if (tiersError) {
       setError(tiersError.message)
       setSubmitting(false)
+      playError()
       return
     }
 
@@ -76,6 +81,7 @@ export default function Onboarding({ session, onComplete }) {
     if (xpError) {
       setError(xpError.message)
       setSubmitting(false)
+      playError()
       return
     }
 

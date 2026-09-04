@@ -12,6 +12,8 @@ import {
 } from '../lib/questLogic'
 import { computeStreak, computeMultiplier } from '../lib/streakLogic'
 import { checkAchievements } from '../lib/achievementLogic'
+import { levelForXp, totalXpFrom } from '../lib/levelLogic'
+import { playClick, playComplete, playLevelUp, playTrialCleared, playError } from '../lib/sound'
 import { workoutPools } from '../content/workoutPools'
 import { trials } from '../content/trials'
 
@@ -247,10 +249,14 @@ export default function Today({ session, userRow }) {
   async function addXp(field, baseAmount) {
     const multiplier = computeMultiplier(streak ?? 0)
     const amount = Math.round(baseAmount * (1 + multiplier))
+    const totalBefore = totalXpFrom(xpStats)
     const newValue = (xpStats?.[field] ?? 0) + amount
     const { error: xpError } = await supabase.from('xp_stats').update({ [field]: newValue }).eq('user_id', userId)
     if (xpError) throw xpError
     setXpStats((prev) => ({ ...prev, [field]: newValue }))
+    if (levelForXp(totalBefore + amount) > levelForXp(totalBefore)) {
+      playLevelUp()
+    }
   }
 
   // Runs after every completion action. Never lets an achievement-check
@@ -302,9 +308,11 @@ export default function Today({ session, userRow }) {
       if (updateError) throw updateError
       await addXp(runToday ? 'endurance_xp' : 'strength_xp', workoutQuest.xp)
       setDailyLog((prev) => ({ ...prev, workout_done: true }))
+      playComplete()
       await runAchievementCheck()
     } catch (err) {
       setError(err.message)
+      playError()
     } finally {
       setSubmitting('')
     }
@@ -321,9 +329,11 @@ export default function Today({ session, userRow }) {
       if (updateError) throw updateError
       await addXp('discipline_xp', restQuest.xp)
       setDailyLog((prev) => ({ ...prev, rest_quest_done: true }))
+      playComplete()
       await runAchievementCheck()
     } catch (err) {
       setError(err.message)
+      playError()
     } finally {
       setSubmitting('')
     }
@@ -351,9 +361,13 @@ export default function Today({ session, userRow }) {
       if (updateError) throw updateError
       if (nowDone) await maybeAwardMealXp(dailyLog.meal_side_done)
       setDailyLog((prev) => ({ ...prev, ...updates }))
-      if (nowDone) await runAchievementCheck()
+      if (nowDone) {
+        playComplete()
+        await runAchievementCheck()
+      }
     } catch (err) {
       setError(err.message)
+      playError()
     } finally {
       setSubmitting('')
     }
@@ -373,9 +387,13 @@ export default function Today({ session, userRow }) {
       if (updateError) throw updateError
       if (nowDone) await maybeAwardMealXp(dailyLog.meal_quest_done)
       setDailyLog((prev) => ({ ...prev, ...updates }))
-      if (nowDone) await runAchievementCheck()
+      if (nowDone) {
+        playComplete()
+        await runAchievementCheck()
+      }
     } catch (err) {
       setError(err.message)
+      playError()
     } finally {
       setSubmitting('')
     }
@@ -393,9 +411,11 @@ export default function Today({ session, userRow }) {
       if (updateError) throw updateError
       await maybeAwardMealXp(dailyLog.meal_quest_done)
       setDailyLog((prev) => ({ ...prev, meal_side_done: true }))
+      playComplete()
       await runAchievementCheck()
     } catch (err) {
       setError(err.message)
+      playError()
     } finally {
       setSubmitting('')
     }
@@ -404,6 +424,7 @@ export default function Today({ session, userRow }) {
   async function logWeight() {
     if (weightInput === '' || Number.isNaN(Number(weightInput))) {
       setError('Enter a weight first.')
+      playError()
       return
     }
     setSubmitting('weight')
@@ -416,8 +437,10 @@ export default function Today({ session, userRow }) {
       if (insertError) throw insertError
       setLastWeightLog({ date: today })
       setWeightInput('')
+      playClick()
     } catch (err) {
       setError(err.message)
+      playError()
     } finally {
       setSubmitting('')
     }
@@ -441,9 +464,11 @@ export default function Today({ session, userRow }) {
       if (tierErr) throw tierErr
       setTier(newTier)
       setPendingTrial(null)
+      playTrialCleared()
       await runAchievementCheck()
     } catch (err) {
       setError(err.message)
+      playError()
     } finally {
       setSubmitting('')
     }
@@ -459,8 +484,10 @@ export default function Today({ session, userRow }) {
         .eq('id', trial.id)
       if (trialErr) throw trialErr
       setPendingTrial(null)
+      playClick()
     } catch (err) {
       setError(err.message)
+      playError()
     } finally {
       setSubmitting('')
     }

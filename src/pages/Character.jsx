@@ -1,20 +1,7 @@
 import { useEffect, useState } from 'react'
 import { supabase } from '../lib/supabaseClient'
 import { achievements } from '../content/achievements'
-
-// level N requires round(50 * N^1.6) cumulative XP — fast growth early, sharply
-// slower at higher levels (see Claude_Code_Build_Tasks.md TASK 8).
-function xpForLevel(n) {
-  return Math.round(50 * Math.pow(n, 1.6))
-}
-
-function levelForXp(totalXp) {
-  let level = 0
-  while (xpForLevel(level + 1) <= totalXp) {
-    level++
-  }
-  return level
-}
+import { xpForLevel, levelForXp, totalXpFrom } from '../lib/levelLogic'
 
 function rankForLevel(level) {
   if (level >= 50) return 'S'
@@ -73,7 +60,7 @@ export default function Character({ session }) {
     )
   }
 
-  const totalXp = STATS.reduce((sum, s) => sum + (xpStats?.[s.field] ?? 0), 0)
+  const totalXp = totalXpFrom(xpStats)
   const level = levelForXp(totalXp)
   const rank = rankForLevel(level)
   const currentThreshold = level === 0 ? 0 : xpForLevel(level)

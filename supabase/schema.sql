@@ -13,11 +13,13 @@ create table if not exists public.users (
   age int,
   free_days int[],
   run_day int,
-  best_streak int default 0
+  best_streak int default 0,
+  sound_enabled boolean default true
 );
 
 alter table public.users add column if not exists age int;
 alter table public.users add column if not exists best_streak int default 0;
+alter table public.users add column if not exists sound_enabled boolean default true;
 
 alter table public.users enable row level security;
 

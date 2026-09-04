@@ -18,9 +18,9 @@
     "semantic_hash": ""
   },
   "src/App.jsx": {
-    "mtime": 1788479975.5132296,
-    "seen": 1788480447.247145,
-    "ast_hash": "332836499055a25a4d032659abf5faed",
+    "mtime": 1788491580.012621,
+    "seen": 1788491825.10235,
+    "ast_hash": "c2dcbcff771bb43370d656ad507796bd",
     "semantic_hash": ""
   },
   "src/lib/supabaseClient.js": {
@@ -180,21 +180,21 @@
     "semantic_hash": ""
   },
   "src/pages/Login.jsx": {
-    "mtime": 1788480001.9229028,
-    "seen": 1788480447.2487104,
-    "ast_hash": "c0e054d889ea715cc0a56214ada2a1c1",
+    "mtime": 1788491676.2668676,
+    "seen": 1788491825.103716,
+    "ast_hash": "c74da4b3a038d039af8c9eba9adb73bc",
     "semantic_hash": ""
   },
   "src/pages/Onboarding.jsx": {
-    "mtime": 1788480019.7650635,
-    "seen": 1788480447.2487116,
-    "ast_hash": "6243d8da12f2f97161f95f6d2f07287a",
+    "mtime": 1788491644.3315763,
+    "seen": 1788491825.1037173,
+    "ast_hash": "45e74eb65241073d8aed3923a6212a43",
     "semantic_hash": ""
   },
   "src/pages/Today.jsx": {
-    "mtime": 1788480357.0695035,
-    "seen": 1788480447.2487156,
-    "ast_hash": "88790659cdb5cb3050d15be7885428bd",
+    "mtime": 1788491742.5343583,
+    "seen": 1788491825.1038103,
+    "ast_hash": "3871a74f6d5edecb0ff59ec42aa796bc",
     "semantic_hash": ""
   },
   "src/content/achievements.js": {
@@ -258,9 +258,9 @@
     "semantic_hash": ""
   },
   "src/pages/Character.jsx": {
-    "mtime": 1788480047.0450275,
-    "seen": 1788480447.248707,
-    "ast_hash": "8729c72ce9fe5dbff040ba4cb83ace26",
+    "mtime": 1788491548.2148218,
+    "seen": 1788491825.103714,
+    "ast_hash": "87d6bb2b501228a857746c1443c5ed7d",
     "semantic_hash": ""
   },
   "src/pages/Progress.jsx": {
@@ -276,9 +276,9 @@
     "semantic_hash": ""
   },
   "src/pages/Settings.jsx": {
-    "mtime": 1788480104.5272205,
-    "seen": 1788480447.2487142,
-    "ast_hash": "41a940a2ea8bdb3f9ccdcb0f42e7dc2c",
+    "mtime": 1788491613.9748821,
+    "seen": 1788491825.1038084,
+    "ast_hash": "10c52cbc9ed2e7d35834e89555d2beb9",
     "semantic_hash": ""
   },
   "public/apple-touch-icon.png": {
@@ -309,6 +309,24 @@
     "mtime": 1788479806.625488,
     "seen": 1788480447.2499146,
     "ast_hash": "83a891ec756612406aec70a15f6434d7",
+    "semantic_hash": ""
+  },
+  "src/lib/levelLogic.js": {
+    "mtime": 1788491532.1509988,
+    "seen": 1788491825.1030674,
+    "ast_hash": "7b952e58b635a4985a85a3a45b422fd4",
+    "semantic_hash": ""
+  },
+  "src/lib/sound.js": {
+    "mtime": 1788491523.650144,
+    "seen": 1788491825.1033363,
+    "ast_hash": "e5dfd2d301a8f6dc73885d0aca2fbfc6",
+    "semantic_hash": ""
+  },
+  "src/lib/sound.test.js": {
+    "mtime": 1788491751.3713586,
+    "seen": 1788491825.1033382,
+    "ast_hash": "c6df2aeff7882618e02ab4685316cc7b",
     "semantic_hash": ""
   }
 }

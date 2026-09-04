@@ -1,29 +1,58 @@
 import { useState } from 'react'
 import { supabase } from '../lib/supabaseClient'
 import { DAYS, todayISODate } from '../lib/onboarding'
+import { setSoundEnabled, playClick, playError } from '../lib/sound'
 
 export default function Settings({ session, userRow, onUserRowChange }) {
   const userId = session.user.id
   const [freeDays, setFreeDays] = useState(userRow.free_days)
   const [proteinTarget, setProteinTarget] = useState(userRow.protein_target)
+  const [soundOn, setSoundOn] = useState(userRow.sound_enabled ?? true)
   const [saved, setSaved] = useState(false)
   const [resetConfirming, setResetConfirming] = useState(false)
   const [resetDone, setResetDone] = useState(false)
   const [error, setError] = useState('')
-  const [submitting, setSubmitting] = useState('') // '' | 'save' | 'reset'
+  const [submitting, setSubmitting] = useState('') // '' | 'save' | 'reset' | 'sound'
 
   function toggleDay(index) {
+    playClick()
     setSaved(false)
     setFreeDays((prev) => (prev.includes(index) ? prev.filter((d) => d !== index) : [...prev, index]))
+  }
+
+  async function toggleSound() {
+    const next = !soundOn
+    setSubmitting('sound')
+    setError('')
+    try {
+      const { data, error: updateError } = await supabase
+        .from('users')
+        .update({ sound_enabled: next })
+        .eq('id', userId)
+        .select()
+        .single()
+      if (updateError) throw updateError
+      setSoundOn(next)
+      setSoundEnabled(next) // takes effect immediately, app-wide
+      onUserRowChange(data)
+      playClick() // silent if next === false, since sound.js already reflects it
+    } catch (err) {
+      setError(err.message)
+      playError()
+    } finally {
+      setSubmitting('')
+    }
   }
 
   async function saveSettings() {
     if (freeDays.length === 0) {
       setError('Pick at least one day you’re free to train.')
+      playError()
       return
     }
     if (proteinTarget === '' || Number.isNaN(Number(proteinTarget))) {
       setError('Enter a valid protein target.')
+      playError()
       return
     }
     setSubmitting('save')
@@ -39,8 +68,10 @@ export default function Settings({ session, userRow, onUserRowChange }) {
       if (updateError) throw updateError
       onUserRowChange(data)
       setSaved(true)
+      playClick()
     } catch (err) {
       setError(err.message)
+      playError()
     } finally {
       setSubmitting('')
     }
@@ -76,8 +107,10 @@ export default function Settings({ session, userRow, onUserRowChange }) {
 
       setResetConfirming(false)
       setResetDone(true)
+      playClick()
     } catch (err) {
       setError(err.message)
+      playError()
     } finally {
       setSubmitting('')
     }
@@ -117,6 +150,13 @@ export default function Settings({ session, userRow, onUserRowChange }) {
             />
           </label>
 
+          <div className="stat-line mt-2">
+            <span className="k">SOUND EFFECTS</span>
+            <button onClick={toggleSound} disabled={submitting === 'sound'} className="text-btn" style={{ color: soundOn ? 'var(--cyan)' : 'var(--text-dim)' }}>
+              [ {soundOn ? 'ON' : 'OFF'} ]
+            </button>
+          </div>
+
           {saved && <p className="status-ok mt-3">Saved</p>}
           <button onClick={saveSettings} disabled={submitting === 'save'} className="quest-btn mt-3">
             {submitting === 'save' ? '[ Saving… ]' : '[ Save changes ]'}
@@ -147,7 +187,10 @@ export default function Settings({ session, userRow, onUserRowChange }) {
                   {submitting === 'reset' ? '[ Resetting… ]' : '[ Yes, reset everything ]'}
                 </button>
                 <button
-                  onClick={() => setResetConfirming(false)}
+                  onClick={() => {
+                    playClick()
+                    setResetConfirming(false)
+                  }}
                   disabled={submitting === 'reset'}
                   className="quest-btn is-quiet flex-1"
                 >
@@ -156,13 +199,25 @@ export default function Settings({ session, userRow, onUserRowChange }) {
               </div>
             </div>
           ) : (
-            <button onClick={() => setResetConfirming(true)} className="quest-btn is-danger mt-3">
+            <button
+              onClick={() => {
+                playClick()
+                setResetConfirming(true)
+              }}
+              className="quest-btn is-danger mt-3"
+            >
               [ Reset all data ]
             </button>
           )}
         </div>
 
-        <button onClick={() => supabase.auth.signOut()} className="quest-btn is-quiet">
+        <button
+          onClick={() => {
+            playClick()
+            supabase.auth.signOut()
+          }}
+          className="quest-btn is-quiet"
+        >
           [ Sign out ]
         </button>
       </div>

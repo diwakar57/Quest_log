@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { supabase } from '../lib/supabaseClient'
+import { playClick, playError } from '../lib/sound'
 
 export default function Login() {
   const [email, setEmail] = useState('')
@@ -22,6 +23,7 @@ export default function Login() {
     if (error) {
       setError(error.message)
       setGoogleLoading(false)
+      playError()
     }
   }
 
@@ -38,6 +40,7 @@ export default function Login() {
     if (error) {
       setError(error.message)
       setStatus('error')
+      playError()
       return
     }
 
@@ -54,6 +57,7 @@ export default function Login() {
     if (error) {
       setVerifyError(error.message)
       setVerifying(false)
+      playError()
       return
     }
     // Success: App.jsx's onAuthStateChange listener picks up the new session.
@@ -97,6 +101,7 @@ export default function Login() {
 
             <button
               onClick={() => {
+                playClick()
                 setStatus('idle')
                 setCode('')
                 setVerifyError('')
