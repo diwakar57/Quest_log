@@ -16,6 +16,18 @@
       "source_location": "L68"
     },
     {
+      "id": "src_app_bottomnav",
+      "label": "BottomNav()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "bottomnav()",
+      "source_file": "src/App.jsx",
+      "source_location": "L31"
+    },
+    {
       "id": "src_app_debugdatebanner",
       "label": "DebugDateBanner()",
       "_callable": true,
@@ -38,6 +50,18 @@
       "norm_label": "loadingscreen()",
       "source_file": "src/App.jsx",
       "source_location": "L60"
+    },
+    {
+      "id": "src_components_trialclearedoverlay_trialclearedoverlay",
+      "label": "TrialClearedOverlay()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "trialclearedoverlay()",
+      "source_file": "src/components/TrialClearedOverlay.jsx",
+      "source_location": "L7"
     },
     {
       "id": "src_lib_onboarding_activedebugdate",
@@ -76,6 +100,138 @@
       "source_location": "L53"
     },
     {
+      "id": "src_lib_sound_getaudiocontext",
+      "label": "getAudioContext()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "getaudiocontext()",
+      "source_file": "src/lib/sound.js",
+      "source_location": "L13"
+    },
+    {
+      "id": "src_lib_sound_playclick",
+      "label": "playClick()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "playclick()",
+      "source_file": "src/lib/sound.js",
+      "source_location": "L58"
+    },
+    {
+      "id": "src_lib_sound_playerror",
+      "label": "playError()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "playerror()",
+      "source_file": "src/lib/sound.js",
+      "source_location": "L90"
+    },
+    {
+      "id": "src_lib_sound_playlevelup",
+      "label": "playLevelUp()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "playlevelup()",
+      "source_file": "src/lib/sound.js",
+      "source_location": "L70"
+    },
+    {
+      "id": "src_lib_sound_playtone",
+      "label": "playTone()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "playtone()",
+      "source_file": "src/lib/sound.js",
+      "source_location": "L34"
+    },
+    {
+      "id": "src_lib_sound_playtrialcleared",
+      "label": "playTrialCleared()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "playtrialcleared()",
+      "source_file": "src/lib/sound.js",
+      "source_location": "L80"
+    },
+    {
+      "id": "src_lib_sound_setsoundenabled",
+      "label": "setSoundEnabled()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "setsoundenabled()",
+      "source_file": "src/lib/sound.js",
+      "source_location": "L9"
+    },
+    {
+      "id": "src_pages_login_login",
+      "label": "Login()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "login()",
+      "source_file": "src/pages/Login.jsx",
+      "source_location": "L5"
+    },
+    {
+      "id": "src_pages_login_login_handlegooglesignin",
+      "label": "handleGoogleSignIn()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "handlegooglesignin()",
+      "source_file": "src/pages/Login.jsx",
+      "source_location": "L14"
+    },
+    {
+      "id": "src_pages_login_login_handlesubmit",
+      "label": "handleSubmit()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "handlesubmit()",
+      "source_file": "src/pages/Login.jsx",
+      "source_location": "L30"
+    },
+    {
+      "id": "src_pages_login_login_handleverifycode",
+      "label": "handleVerifyCode()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "handleverifycode()",
+      "source_file": "src/pages/Login.jsx",
+      "source_location": "L50"
+    },
+    {
       "id": "src_pages_onboarding_onboarding",
       "label": "Onboarding()",
       "_callable": true,
@@ -98,6 +254,18 @@
       "norm_label": "handlesubmit()",
       "source_file": "src/pages/Onboarding.jsx",
       "source_location": "L22"
+    },
+    {
+      "id": "src_pages_onboarding_onboarding_toggleday",
+      "label": "toggleDay()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "toggleday()",
+      "source_file": "src/pages/Onboarding.jsx",
+      "source_location": "L15"
     },
     {
       "id": "src_pages_progress_charttooltip",
@@ -170,6 +338,90 @@
       "norm_label": "usecontainerwidth()",
       "source_file": "src/pages/Progress.jsx",
       "source_location": "L19"
+    },
+    {
+      "id": "src_pages_settings_settings",
+      "label": "Settings()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "settings()",
+      "source_file": "src/pages/Settings.jsx",
+      "source_location": "L6"
+    },
+    {
+      "id": "src_pages_settings_settings_resetalldata",
+      "label": "resetAllData()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "resetalldata()",
+      "source_file": "src/pages/Settings.jsx",
+      "source_location": "L80"
+    },
+    {
+      "id": "src_pages_settings_settings_savesettings",
+      "label": "saveSettings()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "savesettings()",
+      "source_file": "src/pages/Settings.jsx",
+      "source_location": "L47"
+    },
+    {
+      "id": "src_pages_settings_settings_toggleday",
+      "label": "toggleDay()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "toggleday()",
+      "source_file": "src/pages/Settings.jsx",
+      "source_location": "L17"
+    },
+    {
+      "id": "src_pages_settings_settings_togglesound",
+      "label": "toggleSound()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "togglesound()",
+      "source_file": "src/pages/Settings.jsx",
+      "source_location": "L23"
+    },
+    {
+      "id": "src_pages_today_today_logweight",
+      "label": "logWeight()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "logweight()",
+      "source_file": "src/pages/Today.jsx",
+      "source_location": "L426"
+    },
+    {
+      "id": "src_pages_today_today_retrytrial",
+      "label": "retryTrial()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "retrytrial()",
+      "source_file": "src/pages/Today.jsx",
+      "source_location": "L484"
     },
     {
       "id": "src_lib_achievementlogic_checkachievements",
@@ -457,7 +709,7 @@
       "file_type": "code",
       "norm_label": "derivequests()",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L24"
+      "source_location": "L25"
     },
     {
       "id": "src_pages_today_questcard",
@@ -469,7 +721,7 @@
       "file_type": "code",
       "norm_label": "questcard()",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L88"
+      "source_location": "L89"
     },
     {
       "id": "src_pages_today_resolvependingtrial",
@@ -481,7 +733,7 @@
       "file_type": "code",
       "norm_label": "resolvependingtrial()",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L41"
+      "source_location": "L42"
     },
     {
       "id": "src_pages_today_today_load",
@@ -493,7 +745,7 @@
       "file_type": "code",
       "norm_label": "load()",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L136"
+      "source_location": "L138"
     },
     {
       "id": "src_lib_levellogic_levelforxp",
@@ -556,12 +808,24 @@
       "source_location": "L6"
     },
     {
+      "id": "src_lib_sound_playcomplete",
+      "label": "playComplete()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "Today",
+      "file_type": "code",
+      "norm_label": "playcomplete()",
+      "source_file": "src/lib/sound.js",
+      "source_location": "L63"
+    },
+    {
       "id": "src_lib_streaklogic_computemultiplier",
       "label": "computeMultiplier()",
       "_callable": true,
       "_origin": "ast",
-      "community": 23,
-      "community_name": "streakLogic.js",
+      "community": 6,
+      "community_name": "Today",
       "file_type": "code",
       "norm_label": "computemultiplier()",
       "source_file": "src/lib/streakLogic.js",
@@ -572,8 +836,8 @@
       "label": "computeStreak()",
       "_callable": true,
       "_origin": "ast",
-      "community": 23,
-      "community_name": "streakLogic.js",
+      "community": 6,
+      "community_name": "Today",
       "file_type": "code",
       "norm_label": "computestreak()",
       "source_file": "src/lib/streakLogic.js",
@@ -584,8 +848,8 @@
       "label": "formatUTCDate()",
       "_callable": true,
       "_origin": "ast",
-      "community": 23,
-      "community_name": "streakLogic.js",
+      "community": 6,
+      "community_name": "Today",
       "file_type": "code",
       "norm_label": "formatutcdate()",
       "source_file": "src/lib/streakLogic.js",
@@ -596,8 +860,8 @@
       "label": "isDayComplete()",
       "_callable": true,
       "_origin": "ast",
-      "community": 23,
-      "community_name": "streakLogic.js",
+      "community": 6,
+      "community_name": "Today",
       "file_type": "code",
       "norm_label": "isdaycomplete()",
       "source_file": "src/lib/streakLogic.js",
@@ -608,252 +872,12 @@
       "label": "parseUTCDate()",
       "_callable": true,
       "_origin": "ast",
-      "community": 23,
-      "community_name": "streakLogic.js",
+      "community": 6,
+      "community_name": "Today",
       "file_type": "code",
       "norm_label": "parseutcdate()",
       "source_file": "src/lib/streakLogic.js",
       "source_location": "L4"
-    },
-    {
-      "id": "src_pages_today_today_refreshstreak",
-      "label": "refreshStreak()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "streakLogic.js",
-      "file_type": "code",
-      "norm_label": "refreshstreak()",
-      "source_file": "src/pages/Today.jsx",
-      "source_location": "L283"
-    },
-    {
-      "id": "src_app_bottomnav",
-      "label": "BottomNav()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "playError",
-      "file_type": "code",
-      "norm_label": "bottomnav()",
-      "source_file": "src/App.jsx",
-      "source_location": "L31"
-    },
-    {
-      "id": "src_lib_sound_getaudiocontext",
-      "label": "getAudioContext()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "playError",
-      "file_type": "code",
-      "norm_label": "getaudiocontext()",
-      "source_file": "src/lib/sound.js",
-      "source_location": "L13"
-    },
-    {
-      "id": "src_lib_sound_playclick",
-      "label": "playClick()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "playError",
-      "file_type": "code",
-      "norm_label": "playclick()",
-      "source_file": "src/lib/sound.js",
-      "source_location": "L58"
-    },
-    {
-      "id": "src_lib_sound_playcomplete",
-      "label": "playComplete()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "playError",
-      "file_type": "code",
-      "norm_label": "playcomplete()",
-      "source_file": "src/lib/sound.js",
-      "source_location": "L63"
-    },
-    {
-      "id": "src_lib_sound_playerror",
-      "label": "playError()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "playError",
-      "file_type": "code",
-      "norm_label": "playerror()",
-      "source_file": "src/lib/sound.js",
-      "source_location": "L90"
-    },
-    {
-      "id": "src_lib_sound_playlevelup",
-      "label": "playLevelUp()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "playError",
-      "file_type": "code",
-      "norm_label": "playlevelup()",
-      "source_file": "src/lib/sound.js",
-      "source_location": "L70"
-    },
-    {
-      "id": "src_lib_sound_playtone",
-      "label": "playTone()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "playError",
-      "file_type": "code",
-      "norm_label": "playtone()",
-      "source_file": "src/lib/sound.js",
-      "source_location": "L34"
-    },
-    {
-      "id": "src_lib_sound_playtrialcleared",
-      "label": "playTrialCleared()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "playError",
-      "file_type": "code",
-      "norm_label": "playtrialcleared()",
-      "source_file": "src/lib/sound.js",
-      "source_location": "L80"
-    },
-    {
-      "id": "src_lib_sound_setsoundenabled",
-      "label": "setSoundEnabled()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "playError",
-      "file_type": "code",
-      "norm_label": "setsoundenabled()",
-      "source_file": "src/lib/sound.js",
-      "source_location": "L9"
-    },
-    {
-      "id": "src_pages_login_login",
-      "label": "Login()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "playError",
-      "file_type": "code",
-      "norm_label": "login()",
-      "source_file": "src/pages/Login.jsx",
-      "source_location": "L5"
-    },
-    {
-      "id": "src_pages_login_login_handlegooglesignin",
-      "label": "handleGoogleSignIn()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "playError",
-      "file_type": "code",
-      "norm_label": "handlegooglesignin()",
-      "source_file": "src/pages/Login.jsx",
-      "source_location": "L14"
-    },
-    {
-      "id": "src_pages_login_login_handlesubmit",
-      "label": "handleSubmit()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "playError",
-      "file_type": "code",
-      "norm_label": "handlesubmit()",
-      "source_file": "src/pages/Login.jsx",
-      "source_location": "L30"
-    },
-    {
-      "id": "src_pages_login_login_handleverifycode",
-      "label": "handleVerifyCode()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "playError",
-      "file_type": "code",
-      "norm_label": "handleverifycode()",
-      "source_file": "src/pages/Login.jsx",
-      "source_location": "L50"
-    },
-    {
-      "id": "src_pages_onboarding_onboarding_toggleday",
-      "label": "toggleDay()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "playError",
-      "file_type": "code",
-      "norm_label": "toggleday()",
-      "source_file": "src/pages/Onboarding.jsx",
-      "source_location": "L15"
-    },
-    {
-      "id": "src_pages_settings_settings",
-      "label": "Settings()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "playError",
-      "file_type": "code",
-      "norm_label": "settings()",
-      "source_file": "src/pages/Settings.jsx",
-      "source_location": "L6"
-    },
-    {
-      "id": "src_pages_settings_settings_resetalldata",
-      "label": "resetAllData()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "playError",
-      "file_type": "code",
-      "norm_label": "resetalldata()",
-      "source_file": "src/pages/Settings.jsx",
-      "source_location": "L80"
-    },
-    {
-      "id": "src_pages_settings_settings_savesettings",
-      "label": "saveSettings()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "playError",
-      "file_type": "code",
-      "norm_label": "savesettings()",
-      "source_file": "src/pages/Settings.jsx",
-      "source_location": "L47"
-    },
-    {
-      "id": "src_pages_settings_settings_toggleday",
-      "label": "toggleDay()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "playError",
-      "file_type": "code",
-      "norm_label": "toggleday()",
-      "source_file": "src/pages/Settings.jsx",
-      "source_location": "L17"
-    },
-    {
-      "id": "src_pages_settings_settings_togglesound",
-      "label": "toggleSound()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "playError",
-      "file_type": "code",
-      "norm_label": "togglesound()",
-      "source_file": "src/pages/Settings.jsx",
-      "source_location": "L23"
     },
     {
       "id": "src_pages_today_meetstarget",
@@ -861,11 +885,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 6,
-      "community_name": "playError",
+      "community_name": "Today",
       "file_type": "code",
       "norm_label": "meetstarget()",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L84"
+      "source_location": "L85"
     },
     {
       "id": "src_pages_today_today",
@@ -873,11 +897,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 6,
-      "community_name": "playError",
+      "community_name": "Today",
       "file_type": "code",
       "norm_label": "today()",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L115"
+      "source_location": "L116"
     },
     {
       "id": "src_pages_today_today_addxp",
@@ -885,11 +909,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 6,
-      "community_name": "playError",
+      "community_name": "Today",
       "file_type": "code",
       "norm_label": "addxp()",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L249"
+      "source_location": "L251"
     },
     {
       "id": "src_pages_today_today_cleartrial",
@@ -897,11 +921,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 6,
-      "community_name": "playError",
+      "community_name": "Today",
       "file_type": "code",
       "norm_label": "cleartrial()",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L449"
+      "source_location": "L451"
     },
     {
       "id": "src_pages_today_today_commitmealsidenumber",
@@ -909,11 +933,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 6,
-      "community_name": "playError",
+      "community_name": "Today",
       "file_type": "code",
       "norm_label": "commitmealsidenumber()",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L376"
+      "source_location": "L378"
     },
     {
       "id": "src_pages_today_today_commitprotein",
@@ -921,11 +945,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 6,
-      "community_name": "playError",
+      "community_name": "Today",
       "file_type": "code",
       "norm_label": "commitprotein()",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L350"
+      "source_location": "L352"
     },
     {
       "id": "src_pages_today_today_completemealsideboolean",
@@ -933,11 +957,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 6,
-      "community_name": "playError",
+      "community_name": "Today",
       "file_type": "code",
       "norm_label": "completemealsideboolean()",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L402"
+      "source_location": "L404"
     },
     {
       "id": "src_pages_today_today_completerest",
@@ -945,11 +969,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 6,
-      "community_name": "playError",
+      "community_name": "Today",
       "file_type": "code",
       "norm_label": "completerest()",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L321"
+      "source_location": "L323"
     },
     {
       "id": "src_pages_today_today_completeworkout",
@@ -957,23 +981,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 6,
-      "community_name": "playError",
+      "community_name": "Today",
       "file_type": "code",
       "norm_label": "completeworkout()",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L300"
-    },
-    {
-      "id": "src_pages_today_today_logweight",
-      "label": "logWeight()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "playError",
-      "file_type": "code",
-      "norm_label": "logweight()",
-      "source_file": "src/pages/Today.jsx",
-      "source_location": "L424"
+      "source_location": "L302"
     },
     {
       "id": "src_pages_today_today_maybeawardmealxp",
@@ -981,23 +993,23 @@
       "_callable": true,
       "_origin": "ast",
       "community": 6,
-      "community_name": "playError",
+      "community_name": "Today",
       "file_type": "code",
       "norm_label": "maybeawardmealxp()",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L344"
+      "source_location": "L346"
     },
     {
-      "id": "src_pages_today_today_retrytrial",
-      "label": "retryTrial()",
+      "id": "src_pages_today_today_refreshstreak",
+      "label": "refreshStreak()",
       "_callable": true,
       "_origin": "ast",
       "community": 6,
-      "community_name": "playError",
+      "community_name": "Today",
       "file_type": "code",
-      "norm_label": "retrytrial()",
+      "norm_label": "refreshstreak()",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L477"
+      "source_location": "L285"
     },
     {
       "id": "src_pages_today_today_runachievementcheck",
@@ -1005,11 +1017,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 6,
-      "community_name": "playError",
+      "community_name": "Today",
       "file_type": "code",
       "norm_label": "runachievementcheck()",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L265"
+      "source_location": "L267"
     },
     {
       "id": "package",
@@ -1427,6 +1439,17 @@
       "source_location": "L1"
     },
     {
+      "id": "src_components_trialclearedoverlay",
+      "label": "TrialClearedOverlay.jsx",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "trialclearedoverlay.jsx",
+      "source_file": "src/components/TrialClearedOverlay.jsx",
+      "source_location": "L1"
+    },
+    {
       "id": "src_lib_onboarding",
       "label": "onboarding.js",
       "_origin": "ast",
@@ -1446,6 +1469,28 @@
       "file_type": "code",
       "norm_label": "days",
       "source_file": "src/lib/onboarding.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_lib_sound",
+      "label": "sound.js",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "sound.js",
+      "source_file": "src/lib/sound.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_lib_sound_test",
+      "label": "sound.test.js",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "sound.test.js",
+      "source_file": "src/lib/sound.test.js",
       "source_location": "L1"
     },
     {
@@ -2210,28 +2255,6 @@
       "source_location": "L15"
     },
     {
-      "id": "src_lib_streaklogic",
-      "label": "streakLogic.js",
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "streakLogic.js",
-      "file_type": "code",
-      "norm_label": "streaklogic.js",
-      "source_file": "src/lib/streakLogic.js",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_lib_streaklogic_test",
-      "label": "streakLogic.test.js",
-      "_origin": "ast",
-      "community": 23,
-      "community_name": "streakLogic.js",
-      "file_type": "code",
-      "norm_label": "streaklogic.test.js",
-      "source_file": "src/lib/streakLogic.test.js",
-      "source_location": "L1"
-    },
-    {
       "id": "claude_code_build_tasks",
       "label": "Claude_Code_Build_Tasks.md",
       "_origin": "ast",
@@ -2949,25 +2972,25 @@
       "source_location": "L28"
     },
     {
-      "id": "src_lib_sound",
-      "label": "sound.js",
+      "id": "src_lib_streaklogic",
+      "label": "streakLogic.js",
       "_origin": "ast",
       "community": 6,
-      "community_name": "playError",
+      "community_name": "Today",
       "file_type": "code",
-      "norm_label": "sound.js",
-      "source_file": "src/lib/sound.js",
+      "norm_label": "streaklogic.js",
+      "source_file": "src/lib/streakLogic.js",
       "source_location": "L1"
     },
     {
-      "id": "src_lib_sound_test",
-      "label": "sound.test.js",
+      "id": "src_lib_streaklogic_test",
+      "label": "streakLogic.test.js",
       "_origin": "ast",
       "community": 6,
-      "community_name": "playError",
+      "community_name": "Today",
       "file_type": "code",
-      "norm_label": "sound.test.js",
-      "source_file": "src/lib/sound.test.js",
+      "norm_label": "streaklogic.test.js",
+      "source_file": "src/lib/streakLogic.test.js",
       "source_location": "L1"
     },
     {
@@ -3234,6 +3257,18 @@
       "context": "call",
       "source_file": "src/App.jsx",
       "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_trialclearedoverlay_trialclearedoverlay",
+      "target": "src_lib_sound_playtrialcleared",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/components/TrialClearedOverlay.jsx",
+      "source_location": "L12",
       "weight": 1.0
     },
     {
@@ -3953,7 +3988,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L25",
+      "source_location": "L26",
       "weight": 1.0
     },
     {
@@ -3965,7 +4000,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L26",
+      "source_location": "L27",
       "weight": 1.0
     },
     {
@@ -3977,7 +4012,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L27",
+      "source_location": "L28",
       "weight": 1.0
     },
     {
@@ -3989,7 +4024,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L31",
+      "source_location": "L32",
       "weight": 1.0
     },
     {
@@ -4001,7 +4036,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L32",
+      "source_location": "L33",
       "weight": 1.0
     },
     {
@@ -4013,7 +4048,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L33",
+      "source_location": "L34",
       "weight": 1.0
     },
     {
@@ -4025,7 +4060,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L64",
+      "source_location": "L65",
       "weight": 1.0
     },
     {
@@ -4037,7 +4072,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L117",
+      "source_location": "L118",
       "weight": 1.0
     },
     {
@@ -4049,7 +4084,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L512",
+      "source_location": "L519",
       "weight": 1.0
     },
     {
@@ -4061,7 +4096,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L513",
+      "source_location": "L520",
       "weight": 1.0
     },
     {
@@ -4073,7 +4108,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L538",
+      "source_location": "L553",
       "weight": 1.0
     },
     {
@@ -4085,7 +4120,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L250",
+      "source_location": "L252",
       "weight": 1.0
     },
     {
@@ -4097,7 +4132,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L252",
+      "source_location": "L254",
       "weight": 1.0
     },
     {
@@ -4109,7 +4144,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L257",
+      "source_location": "L259",
       "weight": 1.0
     },
     {
@@ -4121,19 +4156,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L258",
-      "weight": 1.0
-    },
-    {
-      "source": "src_pages_today_today_cleartrial",
-      "target": "src_lib_sound_playtrialcleared",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "src/pages/Today.jsx",
-      "source_location": "L467",
+      "source_location": "L260",
       "weight": 1.0
     },
     {
@@ -4145,7 +4168,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L468",
+      "source_location": "L475",
       "weight": 1.0
     },
     {
@@ -4157,7 +4180,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L471",
+      "source_location": "L478",
       "weight": 1.0
     },
     {
@@ -4169,7 +4192,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L380",
+      "source_location": "L382",
       "weight": 1.0
     },
     {
@@ -4181,7 +4204,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L388",
+      "source_location": "L390",
       "weight": 1.0
     },
     {
@@ -4193,7 +4216,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L391",
+      "source_location": "L393",
       "weight": 1.0
     },
     {
@@ -4205,7 +4228,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L392",
+      "source_location": "L394",
       "weight": 1.0
     },
     {
@@ -4217,7 +4240,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L396",
+      "source_location": "L398",
       "weight": 1.0
     },
     {
@@ -4229,7 +4252,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L362",
+      "source_location": "L364",
       "weight": 1.0
     },
     {
@@ -4241,7 +4264,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L365",
+      "source_location": "L367",
       "weight": 1.0
     },
     {
@@ -4253,7 +4276,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L366",
+      "source_location": "L368",
       "weight": 1.0
     },
     {
@@ -4265,24 +4288,12 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L370",
+      "source_location": "L372",
       "weight": 1.0
     },
     {
       "source": "src_pages_today_today_completemealsideboolean",
       "target": "src_pages_today_today_maybeawardmealxp",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "src/pages/Today.jsx",
-      "source_location": "L412",
-      "weight": 1.0
-    },
-    {
-      "source": "src_pages_today_today_completemealsideboolean",
-      "target": "src_lib_sound_playcomplete",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4294,6 +4305,18 @@
     },
     {
       "source": "src_pages_today_today_completemealsideboolean",
+      "target": "src_lib_sound_playcomplete",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/pages/Today.jsx",
+      "source_location": "L416",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_today_today_completemealsideboolean",
       "target": "src_pages_today_today_runachievementcheck",
       "relation": "calls",
       "_origin": "ast",
@@ -4301,7 +4324,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L415",
+      "source_location": "L417",
       "weight": 1.0
     },
     {
@@ -4313,24 +4336,12 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L418",
+      "source_location": "L420",
       "weight": 1.0
     },
     {
       "source": "src_pages_today_today_completerest",
       "target": "src_pages_today_today_addxp",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "src/pages/Today.jsx",
-      "source_location": "L330",
-      "weight": 1.0
-    },
-    {
-      "source": "src_pages_today_today_completerest",
-      "target": "src_lib_sound_playcomplete",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4342,6 +4353,18 @@
     },
     {
       "source": "src_pages_today_today_completerest",
+      "target": "src_lib_sound_playcomplete",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/pages/Today.jsx",
+      "source_location": "L334",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_today_today_completerest",
       "target": "src_pages_today_today_runachievementcheck",
       "relation": "calls",
       "_origin": "ast",
@@ -4349,7 +4372,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L333",
+      "source_location": "L335",
       "weight": 1.0
     },
     {
@@ -4361,24 +4384,12 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L336",
+      "source_location": "L338",
       "weight": 1.0
     },
     {
       "source": "src_pages_today_today_completeworkout",
       "target": "src_pages_today_today_addxp",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "src/pages/Today.jsx",
-      "source_location": "L309",
-      "weight": 1.0
-    },
-    {
-      "source": "src_pages_today_today_completeworkout",
-      "target": "src_lib_sound_playcomplete",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4390,6 +4401,18 @@
     },
     {
       "source": "src_pages_today_today_completeworkout",
+      "target": "src_lib_sound_playcomplete",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/pages/Today.jsx",
+      "source_location": "L313",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_today_today_completeworkout",
       "target": "src_pages_today_today_runachievementcheck",
       "relation": "calls",
       "_origin": "ast",
@@ -4397,7 +4420,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L312",
+      "source_location": "L314",
       "weight": 1.0
     },
     {
@@ -4409,7 +4432,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L315",
+      "source_location": "L317",
       "weight": 1.0
     },
     {
@@ -4421,7 +4444,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L167",
+      "source_location": "L169",
       "weight": 1.0
     },
     {
@@ -4433,7 +4456,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L195",
+      "source_location": "L197",
       "weight": 1.0
     },
     {
@@ -4445,7 +4468,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L427",
+      "source_location": "L429",
       "weight": 1.0
     },
     {
@@ -4457,7 +4480,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L440",
+      "source_location": "L442",
       "weight": 1.0
     },
     {
@@ -4469,7 +4492,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L346",
+      "source_location": "L348",
       "weight": 1.0
     },
     {
@@ -4481,7 +4504,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L284",
+      "source_location": "L286",
       "weight": 1.0
     },
     {
@@ -4493,7 +4516,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L487",
+      "source_location": "L494",
       "weight": 1.0
     },
     {
@@ -4505,7 +4528,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L490",
+      "source_location": "L497",
       "weight": 1.0
     },
     {
@@ -4517,7 +4540,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L267",
+      "source_location": "L269",
       "weight": 1.0
     },
     {
@@ -4553,7 +4576,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L136",
+      "source_location": "L138",
       "weight": 1.0
     },
     {
@@ -4565,7 +4588,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L283",
+      "source_location": "L285",
       "weight": 1.0
     },
     {
@@ -4577,7 +4600,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L300",
+      "source_location": "L302",
       "weight": 1.0
     },
     {
@@ -4589,7 +4612,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L321",
+      "source_location": "L323",
       "weight": 1.0
     },
     {
@@ -4601,7 +4624,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L376",
+      "source_location": "L378",
       "weight": 1.0
     },
     {
@@ -4613,7 +4636,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L449",
+      "source_location": "L451",
       "weight": 1.0
     },
     {
@@ -4625,7 +4648,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L477",
+      "source_location": "L484",
       "weight": 1.0
     },
     {
@@ -4938,6 +4961,18 @@
       "context": "import",
       "source_file": "src/App.jsx",
       "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_trialclearedoverlay",
+      "target": "src_lib_sound_playtrialcleared",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/components/TrialClearedOverlay.jsx",
+      "source_location": "L2",
       "weight": 1.0
     },
     {
@@ -5674,18 +5709,6 @@
     },
     {
       "source": "src_pages_today",
-      "target": "src_lib_sound_playtrialcleared",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "src/pages/Today.jsx",
-      "source_location": "L16",
-      "weight": 1.0
-    },
-    {
-      "source": "src_pages_today",
       "target": "src_content_workoutpools_workoutpools",
       "relation": "imports",
       "_origin": "ast",
@@ -5706,6 +5729,18 @@
       "context": "import",
       "source_file": "src/pages/Today.jsx",
       "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_today",
+      "target": "src_components_trialclearedoverlay_trialclearedoverlay",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/pages/Today.jsx",
+      "source_location": "L19",
       "weight": 1.0
     },
     {
@@ -5934,6 +5969,30 @@
       "context": "import",
       "source_file": "src/App.jsx",
       "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_trialclearedoverlay",
+      "target": "ref_react",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/components/TrialClearedOverlay.jsx",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_components_trialclearedoverlay",
+      "target": "src_lib_sound",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/components/TrialClearedOverlay.jsx",
+      "source_location": "L2",
       "weight": 1.0
     },
     {
@@ -6462,6 +6521,18 @@
       "context": "import",
       "source_file": "src/pages/Today.jsx",
       "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "src_pages_today",
+      "target": "src_components_trialclearedoverlay",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/pages/Today.jsx",
+      "source_location": "L19",
       "weight": 1.0
     },
     {
@@ -7865,6 +7936,17 @@
       "weight": 1.0
     },
     {
+      "source": "src_components_trialclearedoverlay",
+      "target": "src_components_trialclearedoverlay_trialclearedoverlay",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/TrialClearedOverlay.jsx",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
       "source": "src_content_achievements",
       "target": "src_content_achievements_achievements",
       "relation": "contains",
@@ -8664,7 +8746,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L115",
+      "source_location": "L116",
       "weight": 1.0
     },
     {
@@ -8675,7 +8757,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L24",
+      "source_location": "L25",
       "weight": 1.0
     },
     {
@@ -8686,7 +8768,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L41",
+      "source_location": "L42",
       "weight": 1.0
     },
     {
@@ -8697,7 +8779,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L84",
+      "source_location": "L85",
       "weight": 1.0
     },
     {
@@ -8708,7 +8790,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L88",
+      "source_location": "L89",
       "weight": 1.0
     },
     {
@@ -8719,7 +8801,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L249",
+      "source_location": "L251",
       "weight": 1.0
     },
     {
@@ -8730,7 +8812,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L265",
+      "source_location": "L267",
       "weight": 1.0
     },
     {
@@ -8741,7 +8823,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L344",
+      "source_location": "L346",
       "weight": 1.0
     },
     {
@@ -8752,7 +8834,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L350",
+      "source_location": "L352",
       "weight": 1.0
     },
     {
@@ -8763,7 +8845,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L402",
+      "source_location": "L404",
       "weight": 1.0
     },
     {
@@ -8774,10 +8856,10 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/pages/Today.jsx",
-      "source_location": "L424",
+      "source_location": "L426",
       "weight": 1.0
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "cc11ab59f7de635e9f5308e9dd3f5576336f5100"
+  "built_at_commit": "d9c627a2a7710bf07b59878922d9097575c22690"
 }

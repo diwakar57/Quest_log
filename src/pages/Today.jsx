@@ -13,9 +13,10 @@ import {
 import { computeStreak, computeMultiplier } from '../lib/streakLogic'
 import { checkAchievements } from '../lib/achievementLogic'
 import { levelForXp, totalXpFrom } from '../lib/levelLogic'
-import { playClick, playComplete, playLevelUp, playTrialCleared, playError } from '../lib/sound'
+import { playClick, playComplete, playLevelUp, playError } from '../lib/sound'
 import { workoutPools } from '../content/workoutPools'
 import { trials } from '../content/trials'
+import TrialClearedOverlay from '../components/TrialClearedOverlay'
 
 // mealSidePools has no per-item xp (it's a target to hit, not a fixed-xp task),
 // so completing the meal quest (protein + side-quest both done) awards a flat amount.
@@ -126,6 +127,7 @@ export default function Today({ session, userRow }) {
   const [lastWeightLog, setLastWeightLog] = useState(undefined) // undefined = loading, null = none yet
   const [weightInput, setWeightInput] = useState('')
   const [pendingTrial, setPendingTrial] = useState(undefined) // undefined = loading, null = none pending
+  const [clearedTrialResult, setClearedTrialResult] = useState(null) // { beforeTier, afterTier, trialContent } while the takeover overlay is showing
   const [achievementToast, setAchievementToast] = useState(null)
   const [error, setError] = useState('')
   const [submitting, setSubmitting] = useState('') // '' | 'workout' | 'rest' | 'protein' | 'mealSide' | 'weight' | 'trial'
@@ -450,6 +452,7 @@ export default function Today({ session, userRow }) {
     setSubmitting('trial')
     setError('')
     try {
+      const beforeTier = tier
       const maxTier = workoutPools.length - 1
       const newTier = Math.min(tier + 1, maxTier)
       const { error: trialErr } = await supabase
@@ -464,7 +467,11 @@ export default function Today({ session, userRow }) {
       if (tierErr) throw tierErr
       setTier(newTier)
       setPendingTrial(null)
-      playTrialCleared()
+      setClearedTrialResult({
+        beforeTier,
+        afterTier: newTier,
+        trialContent: trials.find((t) => t.tier === trial.tier_number),
+      })
       await runAchievementCheck()
     } catch (err) {
       setError(err.message)
@@ -515,6 +522,14 @@ export default function Today({ session, userRow }) {
 
   return (
     <div className="min-h-screen px-4 py-8 pb-24" style={{ background: 'var(--bg)', color: 'var(--text)' }}>
+      {clearedTrialResult && (
+        <TrialClearedOverlay
+          beforeTier={clearedTrialResult.beforeTier}
+          afterTier={clearedTrialResult.afterTier}
+          trialContent={clearedTrialResult.trialContent}
+          onContinue={() => setClearedTrialResult(null)}
+        />
+      )}
       {achievementToast && (
         <div
           className="mono fixed left-1/2 z-50 w-[calc(100%-2rem)] max-w-xs -translate-x-1/2 border px-4 py-2 text-center text-xs uppercase tracking-wide"

@@ -192,9 +192,9 @@
     "semantic_hash": ""
   },
   "src/pages/Today.jsx": {
-    "mtime": 1788491742.5343583,
-    "seen": 1788491825.1038103,
-    "ast_hash": "3871a74f6d5edecb0ff59ec42aa796bc",
+    "mtime": 1788494683.855888,
+    "seen": 1788494713.787082,
+    "ast_hash": "0e057f69400bd9e03986742c34b57652",
     "semantic_hash": ""
   },
   "src/content/achievements.js": {
@@ -318,15 +318,27 @@
     "semantic_hash": ""
   },
   "src/lib/sound.js": {
-    "mtime": 1788491523.650144,
-    "seen": 1788491825.1033363,
-    "ast_hash": "e5dfd2d301a8f6dc73885d0aca2fbfc6",
+    "mtime": 1788494689.5711925,
+    "seen": 1788494713.786371,
+    "ast_hash": "f017c57a33277ff1fedfb9bd0cffc0b2",
     "semantic_hash": ""
   },
   "src/lib/sound.test.js": {
-    "mtime": 1788491751.3713586,
-    "seen": 1788491825.1033382,
-    "ast_hash": "c6df2aeff7882618e02ab4685316cc7b",
+    "mtime": 1788494689.572193,
+    "seen": 1788494713.7863734,
+    "ast_hash": "d2ed029b1c45e4946bf24af2d1dbc50c",
+    "semantic_hash": ""
+  },
+  "src/components/TrialClearedOverlay.jsx": {
+    "mtime": 1788493110.4114842,
+    "seen": 1788493566.095346,
+    "ast_hash": "3c51215284d07a8c09d2a4bd16cf5670",
+    "semantic_hash": ""
+  },
+  "trial_cleared_takeover.html": {
+    "mtime": 1788492972.8007567,
+    "seen": 1788493566.098644,
+    "ast_hash": "f6f291c7c3211097f770594980909bed",
     "semantic_hash": ""
   }
 }

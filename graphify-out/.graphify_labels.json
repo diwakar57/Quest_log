@@ -5,7 +5,7 @@
   "3": "Quest Log — Build Tasks for Claude Code",
   "4": "What You Must Do When Invoked",
   "5": "devDependencies",
-  "6": "playError",
+  "6": "Today",
   "7": "graphify reference: extra exports and benchmark",
   "8": "graphify reference: query, path, explain",
   "9": "graphify reference: add a URL and watch a folder",
@@ -21,6 +21,5 @@
   "19": "extraction-spec.md",
   "20": "achievementLogic.js",
   "21": "Today.jsx",
-  "22": "Character.jsx",
-  "23": "streakLogic.js"
+  "22": "Character.jsx"
 }
